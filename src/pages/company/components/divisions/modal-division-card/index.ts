@@ -1,0 +1,1 @@
+export { ModalDivisionCard } from './ModalDivisionCard';

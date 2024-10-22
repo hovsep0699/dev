@@ -1,0 +1,6 @@
+:global(.progressbar-node:last-child:after) {
+  display: none;
+}
+:global(.progressbar-node:last-child:before) {
+  display: none;
+}

@@ -1,0 +1,78 @@
+.date-picker-wrapper {
+  position: relative;
+}
+
+.date-picker-wrapper .react-datepicker-wrapper {
+  transition: box-shadow 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid #d7d7d7;
+  border-width: 1px;
+  border-radius: 2px;
+  background-color: #ffffff;
+}
+
+.date-picker-wrapper.date-picker-error .react-datepicker-wrapper {
+  border-color: #e64f49;
+}
+
+.date-picker-wrapper .react-datepicker-wrapper input {
+  width: 100%;
+  color: #212122;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  outline: 0;
+  font-size: 14px;
+  line-height: 38px;
+  min-height: 40px;
+  padding-top: 0;
+  padding-left: 16px;
+  padding-right: 31px;
+  padding-bottom: 0;
+  font-weight: 400;
+  border: 0;
+  background-color: transparent;
+}
+
+.date-picker-label {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 20px;
+  color: #4d4d4f;
+  padding-left: 2px;
+}
+
+.date-picker-text-error {
+  color: red;
+  position: absolute;
+  background: white;
+  padding: 2px;
+  z-index: 100;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.date-picker-label--required {
+  position: relative;
+}
+
+.date-picker-label--required::after {
+  content: ' *';
+  color: #e64f49;
+}
+
+.date-picker-icon {
+  position: absolute;
+  right: 8px;
+  top: 33px;
+}
+
+.two-columns-center_value > div > .date-picker-wrapper .date-picker-icon {
+  top: 13px;
+}
+
+.date-picker-label .date-picker-icon {
+  top: 13px;
+}

@@ -1,0 +1,7 @@
+.themed_form {
+    ::selection {
+        background: #b31b1b !important;
+        color: #fdfdfd !important;
+        text-shadow: none !important;
+    }
+}

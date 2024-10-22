@@ -1,0 +1,1 @@
+export { LegalEntityContractor } from './LegalEntityContractor';

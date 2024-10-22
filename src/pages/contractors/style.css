@@ -1,0 +1,8 @@
+.pagination-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contractor-table-btn {
+  width: 160px;
+}
