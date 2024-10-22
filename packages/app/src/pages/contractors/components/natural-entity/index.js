@@ -1,1 +1,0 @@
-export { NaturalEntityContractor } from './NaturalEntityContractor';

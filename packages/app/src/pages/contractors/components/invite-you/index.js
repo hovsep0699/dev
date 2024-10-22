@@ -1,1 +1,0 @@
-export { InviteYouContractor } from './InviteYouContractor'

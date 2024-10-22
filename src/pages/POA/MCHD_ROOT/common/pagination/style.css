@@ -1,0 +1,16 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 175px;
+}
+
+.pagination-input-wrapper input {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.count-text {
+  text-align: center;
+}

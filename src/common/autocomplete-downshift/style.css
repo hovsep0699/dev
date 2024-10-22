@@ -1,0 +1,76 @@
+.ac_results__custom {
+  position: absolute;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 0;
+  width: 100%;
+}
+
+.table-editor .ac_results__custom {
+  max-width: 240px;
+  width: auto;
+}
+
+.table-editor .downshift-input label div {
+  border: none;
+}
+
+.downshift-custom {
+  position: relative;
+}
+
+.downshift-custom.error input {
+  color: #212122;
+  background: #fceded;
+}
+
+.downshift-arrow.error input {
+  background: transparent;
+}
+
+.downshift-input {
+  display: flex;
+  align-items: center;
+}
+
+.downshift-icon {
+  padding: 5px 9px;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.downshift-icon svg {
+  color: hsl(0, 0%, 80%);
+}
+
+.downshift-icon::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 22px;
+  background-color: hsl(0, 0%, 80%);
+  left: 0;
+}
+
+.downshift-custom.downshift-arrow .downshift-input {
+  position: relative;
+}
+
+.downshift-custom.downshift-arrow .downshift-input:hover {
+  border-color: hsl(0, 0%, 70%);
+}
+
+.downshift-custom.downshift-arrow .downshift-input:hover .downshift-icon svg {
+  color: hsl(0, 0%, 60%);
+}
+
+.downshift-arrow label input {
+  padding-right: 45px;
+}
+
+.error.downshift-arrow .downshift-input label > div{
+  border-color: #e64f49;
+  -webkit-box-shadow: 0 1px 6px rgb(133 23 18 / 10%), 0 3px 6px rgb(133 23 18 / 18%);
+  box-shadow: 0 1px 6px rgb(133 23 18 / 10%), 0 3px 6px rgb(133 23 18 / 18%);
+}

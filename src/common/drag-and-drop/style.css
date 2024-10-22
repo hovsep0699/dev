@@ -1,0 +1,10 @@
+.drag-and-drop-field {
+  border: 2px gray dotted;
+  padding: 20px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}

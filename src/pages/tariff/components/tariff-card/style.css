@@ -1,0 +1,68 @@
+.tariff-info-title {
+  font-size: 20px;
+  font-weight: 300;
+}
+.tariff-info-table-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 40px;
+}
+.tariff-info-table-row {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.tariff-info-table-title {
+  width: 160px;
+  color: #4d4d4f;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.tariff-info-table-value {
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+.tariff-info-table-value div {
+  padding-right: 15px;
+}
+
+.tariff-card-block {
+  border: 1px #e3e3e3 solid;
+  padding: 30px 30px 0 30px;
+}
+
+.tariff-card-flow-row {
+  display: flex;
+  justify-content: space-between;
+  color: #212122;
+  line-height: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.tariff-card-flow-cost {
+  min-width: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tariff-info-table-period {
+  display: flex;
+}
+.tariff-info-table-period > label {
+  margin-right: 8px;
+}
+
+.tariff-active-select-table-row:hover,
+.tariff-active-select-table-row.selected {
+  border: 1px solid #2db2ef;
+  background: #4abdf1;
+  cursor: pointer;
+}
+
+.hidden-tariff-input div {
+  border: none;
+}

@@ -1,0 +1,33 @@
+.license-element-wrapper {
+  display: flex;
+  justify-content: space-between;
+  line-height: 35px;
+}
+
+.license-element-left::before {
+  content: '\e624';
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  font: 16px 'themify';
+  font-size: 42px;
+  color: #7dda71;
+}
+
+.license-element-left {
+  margin: 10px 0 0 40px;
+}
+
+.license-element-td {
+  animation: hideBlock 1s ease;
+}
+
+@keyframes hideBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

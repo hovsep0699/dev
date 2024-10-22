@@ -1,1 +1,0 @@
-export { TransactionsHistory } from './TransactionsHistory';

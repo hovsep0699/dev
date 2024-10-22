@@ -1,1 +1,0 @@
-export { InviteContractor } from './InviteContractor';

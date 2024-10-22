@@ -1,1 +1,0 @@
-export { InfoBadge } from './InfoBadge';

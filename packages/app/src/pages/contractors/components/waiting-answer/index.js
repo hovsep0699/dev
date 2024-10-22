@@ -1,1 +1,0 @@
-export { WaitingAnswerContractor } from './WaitingAnswerContractor';

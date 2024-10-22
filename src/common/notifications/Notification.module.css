@@ -1,0 +1,37 @@
+:global(.notification):hover::after {
+  color: #fdfdfd;
+}
+
+/* arrow down */
+.contract_has_been_received::after,
+.clarification_has_been_received::after,
+.document_has_been_received::after {
+  content: "\e62a";
+  color: #12a6e8;
+}
+
+/* check */
+.contract_has_been_completed::after,
+.document_flow_is_completed::after {
+  content: "\e64c";
+  color: #7dda71;
+}
+
+/* cross */
+.contract_has_been_declined::after,
+.document_has_been_annulled::after,
+.document_has_been_declined::after {
+  content: "\e646";
+  color: #e64f49;
+}
+
+/* ? */
+.annulment_has_been_requested::after {
+  content: "\e69c";
+  color: #e64f49;
+}
+
+.clarification_has_been_requested::after {
+  content: "\e69c";
+  color: #12a6e8;
+}
