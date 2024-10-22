@@ -1,0 +1,36 @@
+{
+  "diServerId": "KSR201902140016e534a393fd44cc88c7c5527a963a894",
+  "name": "\u0418\u041f \u0428\u0440\u0435\u0439\u0434\u0435\u0440 \u041e\u0442\u0442\u043e \u0412\u044f\u0447\u0435\u0441\u043b\u0430\u0432\u043e\u0432\u0438\u0447",
+  "taxAuthority": null,
+  "accountNumber": null,
+  "inn": "745207758316",
+  "bik": null,
+  "ogrn": "319745600027620",
+  "infsoobBeenSent": false,
+  "authorizedPerson": {
+    "person": {
+      "surname": "\u0428\u0440\u0435\u0439\u0434\u0435\u0440",
+      "name": "\u041e\u0442\u0442\u043e",
+      "patronymic": null
+    },
+    "position": ""
+  },
+  "step": {
+    "id": 1,
+    "title": "\u0437\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u0445",
+    "systemName": "waiting_for_data"
+  },
+  "type": {
+    "id": 3,
+    "title": "\u0418\u041f",
+    "systemName": "IP",
+    "name": "IP"
+  },
+  "division": {
+    "kpp": null,
+    "address": null,
+    "classificationNumber": null,
+    "visible": true,
+    "contact": null
+  }
+}

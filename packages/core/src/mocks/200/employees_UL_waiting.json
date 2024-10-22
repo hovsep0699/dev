@@ -1,0 +1,46 @@
+{
+  "recordsTotal": 4,
+  "rows": [
+    {
+      "id": 48,
+      "position": "dddv",
+      "socialNumber": null,
+      "name": "sdvdvs",
+      "surname": "sddsv",
+      "patronymic": "sdvvds",
+      "email": "dsdvs@ygju.rg",
+      "status_system_name": "waiting_for_approval"
+    },
+    {
+      "id": 45,
+      "position": "bddbfs",
+      "socialNumber": null,
+      "name": "dsbdf",
+      "surname": "fbdfb",
+      "patronymic": "dbfsdbf",
+      "email": "1080917003617@rtrtty.ru",
+      "status_system_name": "waiting_for_approval"
+    },
+    {
+      "id": 44,
+      "position": "1080917003617",
+      "socialNumber": null,
+      "name": "dfb",
+      "surname": "fbvdfb",
+      "patronymic": "dfb",
+      "email": "dfb@ghvhj.ru",
+      "status_system_name": "waiting_for_approval"
+    },
+    {
+      "id": 43,
+      "position": "asvsdv",
+      "socialNumber": null,
+      "name": "vsav",
+      "surname": "svasv",
+      "patronymic": "svdsv",
+      "email": "svs@jhkj.ey",
+      "status_system_name": "waiting_for_approval"
+    }
+  ],
+  "status": 0
+}

@@ -1,0 +1,9 @@
+{
+  "code": "2BM",
+  "name": "ООО «Тесет 3»",
+  "inn": "9663901800",
+  "connector": {
+    "id": "connecterId",
+    "status": "connector"
+  }
+}

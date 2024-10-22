@@ -1,0 +1,76 @@
+{
+  "recordsTotal": 10,
+  "rows": [
+    {
+      "id": 460,
+      "full_title": "\u041e\u041e\u041e \"\u0410\u0422\u0411\" \u0411\u0410\u041d\u041a                               ",
+      "short_title": "\u0410\u0422\u0411                           ",
+      "correspondent_account": "30101810145250000097",
+      "bik": "044525097"
+    },
+    {
+      "id": 499,
+      "full_title": "\u0420\u041a\u0426 \u0421\u041e\u0427\u0418                                     ",
+      "short_title": "\u0421\u041e\u0427\u0418                          ",
+      "correspondent_account": "                    ",
+      "bik": "040396000"
+    },
+    {
+      "id": 957,
+      "full_title": "\u041d\u041a\u041e \"\u042d\u041f\u0421\" (\u041e\u041e\u041e)                              ",
+      "short_title": "\u042d\u041f\u0421                           ",
+      "correspondent_account": "30103810445250000313",
+      "bik": "044525313"
+    },
+    {
+      "id": 170,
+      "full_title": "\u0410\u041e \u0410\u041a\u0411 \"\u0422\u0415\u041a\u0421\u0411\u0410\u041d\u041a\"                            ",
+      "short_title": "\u0422\u0415\u041a\u0421\u0411\u0410\u041d\u041a                      ",
+      "correspondent_account": "30101810500000000845",
+      "bik": "049133845"
+    },
+    {
+      "id": 396,
+      "full_title": "\u041a\u0423 \u0410\u041a\u0411 \"\u0412\u0415\u041a\" (\u0410\u041e) - \u0413\u041a \"\u0410\u0421\u0412\"                 ",
+      "short_title": "\u0412\u0415\u041a                           ",
+      "correspondent_account": "30101810445250000784",
+      "bik": "044525784"
+    },
+    {
+      "id": 1605,
+      "full_title": "\u0410\u041e \u0420\u041d\u041a\u041e \"\u0421\u0418\u041d\u0415\u0420\u0413\u0418\u042f\"                           ",
+      "short_title": "                              ",
+      "correspondent_account": "30103810622026311926",
+      "bik": "046311926"
+    },
+    {
+      "id": 669,
+      "full_title": "\u0410\u041e \u0411\u0410\u041d\u041a \"\u0422\u041a\u041f\u0411\"                               ",
+      "short_title": "\u0422\u041a\u041f\u0411                          ",
+      "correspondent_account": "30101810600000000755",
+      "bik": "046850755"
+    },
+    {
+      "id": 1770,
+      "full_title": "\u0420\u041a\u0426 \u0425\u041e\u041b\u041c\u0421\u041a                                   ",
+      "short_title": "\u0425\u041e\u041b\u041c\u0421\u041a                        ",
+      "correspondent_account": "                    ",
+      "bik": "046423000"
+    },
+    {
+      "id": 1,
+      "full_title": "\u041a\u0423 \u041e\u0410\u041e \u0411\u0410\u041d\u041a \"\u041f\u0423\u0420\u041f\u0415\" - \u0413\u041a \"\u0410\u0421\u0412\"               ",
+      "short_title": "\u041f\u0423\u0420\u041f\u0415                         ",
+      "correspondent_account": "30101810600000000702",
+      "bik": "047169702"
+    },
+    {
+      "id": 2,
+      "full_title": "\u0410\u041e \"\u0412\u041e\u041a\u0411\u0410\u041d\u041a\"                                 ",
+      "short_title": "\u0412\u041e\u041a\u0411\u0410\u041d\u041a                       ",
+      "correspondent_account": "30101810700000000722",
+      "bik": "042202722"
+    }
+  ],
+  "status": 0
+}

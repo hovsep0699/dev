@@ -1,0 +1,26 @@
+0 silly argv {
+0 silly argv   _: [ 'run' ],
+0 silly argv   parallel: true,
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0': 'node_modules\\lerna\\cli.js',
+0 silly argv   script: 'start'
+0 silly argv }
+1 notice cli v3.22.1
+2 verbose rootPath C:\Users\Hovsep\Desktop\freelance-work\local_distate\diflow_react
+3 info Executing command in 3 packages: "yarn run start"
+4 silly npmRunScript.stream [ 'start', [], '@distate/app' ]
+5 silly getExecOpts C:\Users\Hovsep\Desktop\freelance-work\local_distate\diflow_react\packages\app undefined
+6 silly npmRunScript.stream [ 'start', [], '@distate/components' ]
+7 silly getExecOpts C:\Users\Hovsep\Desktop\freelance-work\local_distate\diflow_react\packages\components undefined
+8 silly npmRunScript.stream [ 'start', [], '@distate/core' ]
+9 silly getExecOpts C:\Users\Hovsep\Desktop\freelance-work\local_distate\diflow_react\packages\core undefined
+10 error MaxBufferError: stdout maxBuffer exceeded
+10 error     at PassThrough.<anonymous> (C:\Users\Hovsep\Desktop\freelance-work\local_distate\diflow_react\node_modules\get-stream\index.js:41:19)
+10 error     at PassThrough.emit (events.js:327:22)
+10 error     at addChunk (_stream_readable.js:297:12)
+10 error     at readableAddChunk (_stream_readable.js:269:11)
+10 error     at PassThrough.Readable.push (_stream_readable.js:214:10)
+10 error     at PassThrough.Transform.push (_stream_transform.js:152:32)
+10 error     at PassThrough.afterTransform (_stream_transform.js:96:10)
+10 error     at PassThrough._transform (_stream_passthrough.js:46:3)
+10 error     at PassThrough.Transform._read (_stream_transform.js:191:10)
