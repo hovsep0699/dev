@@ -17,9 +17,9 @@ export const PoaRouter = () => {
     if (!isLoading) {
         return <Loading />;
     }
-    const createPresenter: CreatePresenter = serviceLocator.get<CreatePresenter>(CreatePresenter);
-    const subTrustPresenter: SubTrustPresenter = serviceLocator.get<SubTrustPresenter>(SubTrustPresenter);
-    const dashboardPresenter: DashboardPresenter = serviceLocator.get<DashboardPresenter>(DashboardPresenter);
+    const createPresenter: CreatePresenter = serviceLocator.get<CreatePresenter>("CreatePresenter");
+    const subTrustPresenter: SubTrustPresenter = serviceLocator.get<SubTrustPresenter>("SubTrustPresenter");
+    const dashboardPresenter: DashboardPresenter = serviceLocator.get<DashboardPresenter>("DashboardPresenter");
     return (
         <Layout pageMenuHeader="МЧД" topBarHeading={'МЧД'}>
             <GlobalStateProvider>

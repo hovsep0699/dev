@@ -20,7 +20,7 @@ const IndividualPage: React.FC<IndividualPageProps> = ({presenter}: IndividualPa
             <Box  width="100%">
                 <GeneralSectionHeader
                     isCreatePage={true}
-                    presenter={serviceLocator.get(SectionPresenter)}
+                    presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                     baseWidth={"320px"}/>
                 <IndividualActions presenter={presenter} baseWidth={"320px"}/>
 

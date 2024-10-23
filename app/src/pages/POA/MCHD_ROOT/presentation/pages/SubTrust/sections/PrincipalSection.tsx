@@ -115,7 +115,7 @@ console.log("[[[[[[[[[]]]]]]]]]]",principals);
     <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter>
         builder={(state: SubTrustPresenterState)=>(
             <GeneralSectionOptions
-                presenter={serviceLocator.get(SectionPresenter)}
+                presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                 sectionData={state.principals}
                 onShowForm={(e: any, index:number)=>showForm(e, index, false)}
                 onRemove={handleRemovePrincipal}
@@ -128,7 +128,7 @@ console.log("[[[[[[[[[]]]]]]]]]]",principals);
                 builder={(index: number, principal: any)=>{
                     return principal?.getFields()["type"] !== 'IP' && (
                         <AdminSection
-                            principalManager={serviceLocator.get(PrincipalManager)}
+                            principalManager={serviceLocator.get<PrincipalManager>("PrincipalManager")}
                             presenter={presenter}
                             admin={principal.getAdmins()}
                             principalIndex={index}

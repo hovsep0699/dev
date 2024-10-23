@@ -48,7 +48,7 @@ class ModalWrapper extends Component<ModalWrapperProps, ModalWrapperState> {
 
 
 const ModalForm = ({defaultValues , fields , options , handleSubmit, closeModal ,isModalOpen } :any) => {
-    const createPresenter = serviceLocator.get(CreatePresenter);
+    const createPresenter = serviceLocator.get<CreatePresenter>("CreatePresenter");
     const title = 'TitleЗаголовок модального окна';
     const content = "lorem ipsum";
 

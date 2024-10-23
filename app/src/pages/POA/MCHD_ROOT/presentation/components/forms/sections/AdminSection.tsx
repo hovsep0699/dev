@@ -203,7 +203,7 @@ const AdminSection: React.FC<AdminSectionProps> = ({
                 <ObservableComponent<FormPresenterViewModel, FormPresenterState, FormPresenter>
                     builder={(formState: FormPresenterState) => (
                         <GeneralSectionOptions
-                            presenter={serviceLocator.get(SectionPresenter)}
+                            presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                             sectionData={admin}
                             baseWidth={baseWidth}
                             onShowForm={async (e: any, index: number) => {

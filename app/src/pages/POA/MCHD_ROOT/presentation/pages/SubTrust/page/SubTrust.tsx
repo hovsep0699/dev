@@ -43,7 +43,7 @@ const SubTrust: React.FC<SubTrustProps> = ({
                 >
                     <GeneralSectionHeader
                         isCreatePage={false}
-                        presenter={serviceLocator.get(SectionPresenter)}
+                        presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                         baseWidth={baseWidth}
                         rootAttorney={"Уникальный номер доверенности"}
                         machineReadable={"Внутренный номер доверенности"}

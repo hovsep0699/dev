@@ -1,9 +1,9 @@
 // src/AxiosClient.ts
 
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import {ServiceLocator} from "../../di/ServiceLocator";
 import {BlobClient} from "./BlobClient";
 import autobind from "autobind-decorator";
+import {serviceLocator} from "../../di/app_component";
 
 class AxiosClient {
     private client: AxiosInstance;
@@ -11,7 +11,7 @@ class AxiosClient {
 
 
     public static getInstance(): AxiosClient {
-        return ServiceLocator.getInstance().get(AxiosClient);
+        return serviceLocator.get<AxiosClient>("AxiosClient");
     }
 
     constructor(blobClient: BlobClient) {

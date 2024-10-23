@@ -89,7 +89,7 @@ const RepresentativeSection: React.FC<RepresentativeSectionProps> = ({ represent
       <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter>
           builder={(state: SubTrustPresenterState)=>(
               <GeneralSectionOptions
-                  presenter={serviceLocator.get(SectionPresenter)}
+                  presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                   sectionData={state.representatives}
                   onShowForm={(e: any, index: number)=>showForm(e, index, false)}
                   onRemove={handleRemoveRepresentative}

@@ -31,19 +31,19 @@ const ActionButtons: React.FC<ActionsButtonProps> = ({baseWidth, presenter}: Act
                     console.log("state: ", state);
                     return <>
                         <PrincipalSection
-                            principalManager={serviceLocator.get(PrincipalManager)}
+                            principalManager={serviceLocator.get<PrincipalManager>("PrincipalManager")}
                             principals={state.principals}
                             presenter={presenter}
                             baseWidth={baseWidth}
                         />
                         <RepresentativeSection
-                            representativeManager={serviceLocator.get(RepresentativeManager)}
+                            representativeManager={serviceLocator.get<RepresentativeManager>("RepresentativeManager")}
                             presenter={presenter}
                             representatives={state.representatives}
                             baseWidth={baseWidth}
                         />
                         <GeneralSectionsFooter
-                            presenter={serviceLocator.get(SectionPresenter)}
+                            presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                             baseWidth={baseWidth}/>
                     </>
                 }}

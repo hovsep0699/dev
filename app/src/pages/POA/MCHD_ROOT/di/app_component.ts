@@ -51,60 +51,65 @@ export class PoaConfig {
         this.isFinishInitialized = true;
     }
      private async _configurePresenters() {
-        const principalManager: PrincipalManager = serviceLocator.get<PrincipalManager>(PrincipalManager);
-        const representativeManager: RepresentativeManager = serviceLocator.get<RepresentativeManager>(RepresentativeManager);
+        const principalManager: PrincipalManager = serviceLocator.get<PrincipalManager>("PrincipalManager");
+        const representativeManager: RepresentativeManager = serviceLocator.get<RepresentativeManager>("RepresentativeManager");
          console.log("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS:::: ", principalManager instanceof PrincipalManager)
         serviceLocator.registerSingleton(
             CreatePresenter,
+            "CreatePresenter",
             principalManager,
             representativeManager
         );
         serviceLocator.registerSingleton(
             SubTrustPresenter,
+            "SubTrustPresenter",
             principalManager,
             representativeManager
         );
         serviceLocator.registerSingleton(
             SectionPresenter,
+            "SectionPresenter",
             principalManager,
             representativeManager
         );
         serviceLocator.registerSingleton(
             FormPresenter,
+            "FormPresenter",
             principalManager,
             representativeManager,
-            serviceLocator.get(SubAdminManager)
+            serviceLocator.get<SubAdminManager>("SubAdminManager")
         );
         serviceLocator.registerSingleton(
             DashboardPresenter,
+            "DashboardPresenter",
             principalManager,
             representativeManager
         );
     }
 
     private async _configureNetworkClient()  {
-        serviceLocator.registerSingleton(AxiosClient, serviceLocator.get(BlobClient));
-        serviceLocator.registerSingleton(ApiClient, serviceLocator.get(AxiosClient));
-        serviceLocator.registerSingleton(CreateService, serviceLocator.get(ApiClient));
+        serviceLocator.registerSingleton(AxiosClient, "AxiosClient", serviceLocator.get<BlobClient>("BlobClient"));
+        serviceLocator.registerSingleton(ApiClient, "ApiClient", serviceLocator.get<AxiosClient>("AxiosClient"));
+        serviceLocator.registerSingleton(CreateService, "CreateService", serviceLocator.get<ApiClient>("ApiClient"));
     }
 
     private async _configureBlob() {
-        serviceLocator.registerSingleton(BlobClient);
+        serviceLocator.registerSingleton(BlobClient, "BlobClient");
     }
 
     private async _configureManagers(){
         const representatives: Representative[] = new Array<Representative>();
         const principalAdmins: PrincipalAdmin[] = new Array<PrincipalAdmin>();
-        serviceLocator.registerSingleton(RepresentativeManager, representatives);
-        serviceLocator.registerSingleton(PrincipalManager, new Array<Principal>(new Principal(principalAdmins, doveritel)));
-        serviceLocator.registerSingleton(SubAdminManager);
+        serviceLocator.registerSingleton(RepresentativeManager, "RepresentativeManager", representatives);
+        serviceLocator.registerSingleton(PrincipalManager, "PrincipalManager", new Array<Principal>(new Principal(principalAdmins, doveritel)));
+        serviceLocator.registerSingleton(SubAdminManager, "SubAdminManager");
 
     }
 
     private async _configureJsonManager() {
-        serviceLocator.registerSingleton(JsonCreateManager,
-            serviceLocator.get(CreatePresenter),
-            serviceLocator.get(SectionPresenter));
+        serviceLocator.registerSingleton(JsonCreateManager, "JsonCreateManager",
+            serviceLocator.get<CreatePresenter>("CreatePresenter"),
+            serviceLocator.get<SectionPresenter>("SectionPresenter"));
     }
 }
 

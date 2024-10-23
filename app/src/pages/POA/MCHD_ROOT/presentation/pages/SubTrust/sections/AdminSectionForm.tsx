@@ -63,7 +63,7 @@ const AdminSectionForm = ({setFieldValue, presenter, baseWidth }: any) => {
       <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter>
           builder={(state: SubTrustPresenterState)=>(
               <GeneralSectionOptions
-                  presenter={serviceLocator.get(SectionPresenter)}
+                  presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                   sectionData={admin}
                   onShowForm={showAdminForm}
                   onRemove={handleRemoveAdmin}

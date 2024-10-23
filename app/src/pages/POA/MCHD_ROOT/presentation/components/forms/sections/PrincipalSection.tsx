@@ -94,7 +94,7 @@ const PrincipalSection: React.FC<PrincipalSectionProps> = ({
             builder={(state: CreatePresenterState) => {
                 return (
                     <GeneralSectionOptions
-                        presenter={serviceLocator.get(SectionPresenter)}
+                        presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                         sectionData={state.principals}
                         onShowForm={(e: any, index: number) => showForm(e, index, state.isSubmitting, false)}
                         onRemove={handleRemovePrincipal}
@@ -110,10 +110,10 @@ const PrincipalSection: React.FC<PrincipalSectionProps> = ({
                             if (fields != null && fields.hasOwnProperty("type") && fields.hasOwnProperty("type")) {
                                 return fields.type !== 'IP' && (
                                     <AdminSection
-                                        subAdminManager={serviceLocator.get(SubAdminManager)}
-                                        formPresenter={serviceLocator.get(FormPresenter)}
+                                        subAdminManager={serviceLocator.get<SubAdminManager>("SubAdminManager")}
+                                        formPresenter={serviceLocator.get<FormPresenter>("FormPresenter")}
                                         presenter={presenter}
-                                        principalManager={serviceLocator.get(PrincipalManager)}
+                                        principalManager={serviceLocator.get<PrincipalManager>("PrincipalManager")}
                                         admin={principal?.getAdmins() ?? new Array<PrincipalAdmin>()}
                                         principalIndex={index}/>
                                 )

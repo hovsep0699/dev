@@ -94,7 +94,7 @@ const AdminSection: React.FC<AdminSectionProps> = ({ admin, baseWidth, principal
   return (
       <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter> builder={(state: SubTrustPresenterState) => (
           <GeneralSectionOptions
-              presenter={serviceLocator.get(SectionPresenter)}
+              presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
               sectionData={admin}
               baseWidth={baseWidth}
               onShowForm={(e: any, index: number)=>showAdminForm(e, index, principalIndex, false)}

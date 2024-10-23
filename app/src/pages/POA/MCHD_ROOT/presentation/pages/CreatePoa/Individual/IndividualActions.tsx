@@ -29,19 +29,19 @@ const IndividualActions: React.FC<IndividualActionsProps> = ({baseWidth, present
                     console.log("state: ", state.principals);
                     return <>
                         <PrincipalSection
-                            principalManager={serviceLocator.get(PrincipalManager)}
+                            principalManager={serviceLocator.get<PrincipalManager>("PrincipalManager")}
                             presenter={presenter}
                             principals={state.principals}
                             baseWidth={baseWidth}
                         />
                         <RepresevtativeSection
-                            representativeManager={serviceLocator.get(RepresentativeManager)}
+                            representativeManager={serviceLocator.get<RepresentativeManager>("RepresentativeManager")}
                             presenter={presenter}
                             representatives={state.representatives}
                             baseWidth={baseWidth}
                         />
                         <GeneralSectionsFooter
-                            presenter={serviceLocator.get(SectionPresenter)}
+                            presenter={serviceLocator.get<SectionPresenter>("SectionPresenter")}
                             baseWidth={baseWidth}/>
                     </>
                 }}

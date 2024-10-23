@@ -17,8 +17,8 @@ export class ServiceLocator {
     private services: Map<string, { instance?: any; factory?: ServiceFactory<any>; args?: any[] }> = new Map();
 
     @autobind
-    public registerSingleton<T>(key: new (...args: any[]) => T, ...args: any[]): void {
-        const keyString = key.name;
+    public registerSingleton<T>(key: new (...args: any[]) => T, keyName: string, ...args: any[]): void {
+        const keyString = keyName;
         console.log("registerSingleton", keyString);
         if (!this.services.has(keyString)) {
             const instance: T = new key(...args);
@@ -27,14 +27,14 @@ export class ServiceLocator {
     }
 
     @autobind
-    public register<T>(key: new (...args: any[]) => T, factory: ServiceFactory<T>): void {
+    public register<T>(key: new (...args: any[]) => T, keyName: string, factory: ServiceFactory<T>): void {
         const keyString = key.name;
         this.services.set(keyString, { factory, instance: undefined });
     }
 
     @autobind
-    public get<T>(key: new (...args: any[]) => T, ...args: any[]): T {
-        const keyString = key.name;
+    public get<T>(keyName: string, ...args: any[]): T {
+        const keyString = keyName;
         const service = this.services.get(keyString);
         if (!service) {
             throw new Error(`Service not found for key: ${keyString}`);

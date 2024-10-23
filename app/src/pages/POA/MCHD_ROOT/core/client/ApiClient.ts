@@ -1,6 +1,6 @@
-import {ServiceLocator} from "../../di/ServiceLocator";
 import AxiosClient from "./AxiosClient";
 import autobind from "autobind-decorator";
+import {serviceLocator} from "../../di/app_component";
 
 export class ApiClient {
 
@@ -11,7 +11,7 @@ export class ApiClient {
     }
 
     public static getInstance(): ApiClient {
-        return ServiceLocator.getInstance().get(ApiClient);
+        return serviceLocator.get<ApiClient>("ApiClient");
     }
 
     @autobind
