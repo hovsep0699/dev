@@ -14,6 +14,8 @@ import {JsonCreateManager} from "../core/JsonManager";
 import {FormPresenter} from "../presentation/components/forms/presenter/FormPresenter";
 import {SubAdminManager} from "../core/SubAdminManager";
 import autobind from "autobind-decorator";
+import {Principal} from "../domain/model/Principal";
+import {PrincipalAdmin} from "../domain/model/PrincipalAdmin";
 
 
 export const serviceLocator = ServiceLocator.getInstance();
@@ -87,9 +89,9 @@ export class PoaConfig {
     }
 
     private async _configureManagers(){
-        serviceLocator.registerSingleton(RepresentativeManager, []);
-        serviceLocator.registerSingleton(PrincipalManager, [doveritel]);
-        serviceLocator.registerSingleton(SubAdminManager, []);
+        serviceLocator.registerSingleton(RepresentativeManager, new Array<RepresentativeManager>());
+        serviceLocator.registerSingleton(PrincipalManager, new Array<Principal>(new Principal(new Array<PrincipalAdmin>(), doveritel)));
+        serviceLocator.registerSingleton(SubAdminManager);
 
     }
 
