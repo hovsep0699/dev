@@ -7,6 +7,7 @@ import { ButtonWrapper } from './PoaActionButtonsList';
 import {useGlobalState} from "../../../../mocks/context/GlobalState";
 import {DashboardPresenter} from "../presenter/DashboardPresenter";
 import {poaConfig} from "../../../../di/app_component";
+import {Loading} from "@distate/components";
 
 const TableContainer = styled.div`
   margin: 20px 20px;
@@ -66,8 +67,8 @@ const PoaTable: React.FC<PoaTableProps> = ({ setSelectedPoa, presenter }: PoaTab
     setSelectedPoa(record);
   };
   const isLoading = poaConfig.isInitialized();
-  if (isLoading) {
-    return <></>;
+  if (!isLoading) {
+    return <Loading />;
   }
   return (
       <>

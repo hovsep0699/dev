@@ -10,6 +10,7 @@ import {poaConfig, serviceLocator} from "../../../../di/app_component";
 import {CreateService} from "../../../../core/network/CreateService";
 import {JsonCreateManager} from "../../../../core/JsonManager";
 import {CreatePresenterViewModel} from "../presenter/createPresenterViewModel";
+import {Loading} from "@distate/components";
 
 
 interface CreatePoaProps {
@@ -22,8 +23,8 @@ const CreatePoa: React.FC<CreatePoaProps> = ({presenter}: CreatePoaProps) => {
     const createService = serviceLocator.get(CreateService);
     const jsonCreate = serviceLocator.get(JsonCreateManager);
     const isLoading = poaConfig.isInitialized();
-    if (isLoading) {
-        return <></>;
+    if (!isLoading) {
+        return <Loading />;
     }
   return (
       <ObservableComponent<CreatePresenterViewModel, CreatePresenterState, CreatePresenter>

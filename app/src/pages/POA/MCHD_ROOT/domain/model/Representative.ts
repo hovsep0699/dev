@@ -7,7 +7,6 @@ import {PersonJsonConverter} from "../../data/converter/PersonJsonConverter";
 import {RepresentativeTypes} from "../../presentation/constants/options/types";
 import {deepEqual} from "../../utils/json_hepler";
 import {IModel} from "./IModel";
-import {SubAdminProps} from "./SubAdmin";
 
 export interface RepresentativeProps {
     fields?: any | null;

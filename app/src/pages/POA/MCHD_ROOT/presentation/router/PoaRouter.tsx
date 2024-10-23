@@ -10,11 +10,12 @@ import {CreatePresenter} from "../pages/CreatePoa/presenter/createPresenter";
 import {SubTrustPresenter} from "../pages/SubTrust/presenter/SubTrustPresenter";
 import POADashboard from "../pages/POADashboard/page/POADashboard";
 import {DashboardPresenter} from "../pages/POADashboard/presenter/DashboardPresenter";
+import {Loading} from "@distate/components";
 
 export const PoaRouter = () => {
     const isLoading = poaConfig.isInitialized();
-    if (isLoading) {
-        return <></>;
+    if (!isLoading) {
+        return <Loading />;
     }
     const createPresenter: CreatePresenter = serviceLocator.get<CreatePresenter>(CreatePresenter);
     const subTrustPresenter: SubTrustPresenter = serviceLocator.get<SubTrustPresenter>(SubTrustPresenter);

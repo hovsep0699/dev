@@ -13,7 +13,7 @@ export  class SubAdminManager {
         this.admins = new Array<SubAdmin>();
     }
     @autobind
-    public addAdmin(fields : object) {
+    public addAdmin(fields: any) {
         const admin: SubAdmin = new SubAdmin();
         admin.setFields(fields);
         this.admins.push(admin);

@@ -14,8 +14,8 @@ const POADashboard: React.FC<POADashboardProps> = ({presenter}: POADashboardProp
     const [selectedPoa, setSelectedPoa] = React.useState(null);
     const {isCompany, setIsCompany} = useGlobalState()
     const isLoading = poaConfig.isInitialized();
-    if (isLoading) {
-        return <></>;
+    if (!isLoading) {
+        return <Loading />;
     }
     return (
         <>

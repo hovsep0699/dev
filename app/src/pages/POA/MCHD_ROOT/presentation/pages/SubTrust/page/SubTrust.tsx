@@ -10,6 +10,7 @@ import GeneralSectionHeader from "../../Sections/page/GeneralSectionHeader";
 import {poaConfig, serviceLocator} from "../../../../di/app_component";
 import {SectionPresenter} from "../../Sections/presenter/SectionPresenter";
 import {SubTrustPresenterViewModel} from "../presenter/SubTrustPresenterViewModel";
+import {Loading} from "@distate/components";
 
 
 interface SubTrustProps {
@@ -29,8 +30,8 @@ const SubTrust: React.FC<SubTrustProps> = ({
     paddingLeft
 }: SubTrustProps) => {
     const isLoading = poaConfig.isInitialized();
-    if (isLoading) {
-        return <></>;
+    if (!isLoading) {
+        return <Loading />;
     }
     return (
         <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter>

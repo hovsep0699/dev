@@ -24,6 +24,7 @@ import {
 } from "../../../../assets/icons";
 import {DashboardPresenter} from "../presenter/DashboardPresenter";
 import {poaConfig} from "../../../../di/app_component";
+import {Loading} from "@distate/components";
 
 
 interface PoaActionButtonsListProps {
@@ -245,8 +246,8 @@ const PoaActionButtonsList: React.FC<PoaActionButtonsListProps> = ({ selectedPoa
 
   const filteredButtons = buttonData.filter((button, _: any) => button.isShow)
   const isLoading = poaConfig.isInitialized();
-  if (isLoading) {
-    return <></>;
+  if (!isLoading) {
+    return <Loading />;
   }
   return (
     <>

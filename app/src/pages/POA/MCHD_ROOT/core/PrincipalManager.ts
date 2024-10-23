@@ -1,11 +1,12 @@
+"use strict"
+
 import {Principal} from "../domain/model/Principal";
 import autobind from "autobind-decorator";
-
 
 export  class PrincipalManager {
     private principals: Principal[];
     constructor(principals: Principal[] = new Array<Principal>()) {
-        this.principals = [new Principal()];
+        this.principals = new Array<Principal>(new Principal());
 
         if (principals && principals.length > 0) {
             this.principals[0].setFields(principals[0]);

@@ -21,7 +21,7 @@ export class ServiceLocator {
         const keyString = key.name;
         console.log("registerSingleton", keyString);
         if (!this.services.has(keyString)) {
-            const instance = new key(...args);
+            const instance: T = new key(...args);
             this.services.set(keyString, { instance });
         }
     }
@@ -40,12 +40,12 @@ export class ServiceLocator {
             throw new Error(`Service not found for key: ${keyString}`);
         }
         if (service.instance) {
-            return service.instance;
+            return service.instance as T;
         }
         if (service.factory) {
             const instance = service.factory(...args);
             service.instance = instance; // Store instance for future calls
-            return instance;
+            return instance as T;
         }
         throw new Error(`No instance or factory found for key: ${keyString}`);
     }

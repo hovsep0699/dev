@@ -39,7 +39,7 @@ const GlobalStateContext = createContext<GlobalStateContextType | undefined>(und
 export const GlobalStateProvider = ({ children }: { children: ReactNode }) => {
   const [isCompany, setIsCompany] = useState<boolean>(false);
   const [userType, setUserType] = useState<UserType>(UserType.LegalEntity); // Default to 'Legal entity'
-  const [records, setRecords] = useState<RecordData[]>([
+  const [records, setRecords] = useState<RecordData[]>(new Array<RecordData>(
     {
       doviritel: 'ООО "Ромашка и Лютики"',
       predstavitel: 'Петров Петр Петрович (123456789123)',
@@ -60,7 +60,7 @@ export const GlobalStateProvider = ({ children }: { children: ReactNode }) => {
       status: 'Действительна',
       isUsed: true,
     },
-  ]);
+  ));
 
   return (
     <GlobalStateContext.Provider value={{ records, setRecords, isCompany, setIsCompany, userType, setUserType }}>

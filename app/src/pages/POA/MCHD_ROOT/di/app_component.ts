@@ -16,6 +16,7 @@ import {SubAdminManager} from "../core/SubAdminManager";
 import autobind from "autobind-decorator";
 import {Principal} from "../domain/model/Principal";
 import {PrincipalAdmin} from "../domain/model/PrincipalAdmin";
+import {Representative} from "../domain/model/Representative";
 
 
 export const serviceLocator = ServiceLocator.getInstance();
@@ -50,31 +51,34 @@ export class PoaConfig {
         this.isFinishInitialized = true;
     }
      private async _configurePresenters() {
+        const principalManager: PrincipalManager = serviceLocator.get<PrincipalManager>(PrincipalManager);
+        const representativeManager: RepresentativeManager = serviceLocator.get<RepresentativeManager>(RepresentativeManager);
+         console.log("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS:::: ", principalManager instanceof PrincipalManager)
         serviceLocator.registerSingleton(
             CreatePresenter,
-            serviceLocator.get(PrincipalManager),
-            serviceLocator.get(RepresentativeManager)
+            principalManager,
+            representativeManager
         );
         serviceLocator.registerSingleton(
             SubTrustPresenter,
-            serviceLocator.get(PrincipalManager),
-            serviceLocator.get(RepresentativeManager)
+            principalManager,
+            representativeManager
         );
         serviceLocator.registerSingleton(
             SectionPresenter,
-            serviceLocator.get(PrincipalManager),
-            serviceLocator.get(RepresentativeManager)
+            principalManager,
+            representativeManager
         );
         serviceLocator.registerSingleton(
             FormPresenter,
-            serviceLocator.get(PrincipalManager),
-            serviceLocator.get(RepresentativeManager),
+            principalManager,
+            representativeManager,
             serviceLocator.get(SubAdminManager)
         );
         serviceLocator.registerSingleton(
             DashboardPresenter,
-            serviceLocator.get(PrincipalManager),
-            serviceLocator.get(RepresentativeManager)
+            principalManager,
+            representativeManager
         );
     }
 
@@ -89,8 +93,10 @@ export class PoaConfig {
     }
 
     private async _configureManagers(){
-        serviceLocator.registerSingleton(RepresentativeManager, new Array<RepresentativeManager>());
-        serviceLocator.registerSingleton(PrincipalManager, new Array<Principal>(new Principal(new Array<PrincipalAdmin>(), doveritel)));
+        const representatives: Representative[] = new Array<Representative>();
+        const principalAdmins: PrincipalAdmin[] = new Array<PrincipalAdmin>();
+        serviceLocator.registerSingleton(RepresentativeManager, representatives);
+        serviceLocator.registerSingleton(PrincipalManager, new Array<Principal>(new Principal(principalAdmins, doveritel)));
         serviceLocator.registerSingleton(SubAdminManager);
 
     }

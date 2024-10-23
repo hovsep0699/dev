@@ -13,6 +13,7 @@ export class CreatePresenter extends Presenter<CreatePresenterViewModel, CreateP
     private representativeManager: RepresentativeManager;
 
     constructor(principalManager: PrincipalManager, representativeManager: RepresentativeManager) {
+        console.log("CRRRRRRRRRREEEEEEEEEEEE:::: ", principalManager);
         super(new CreatePresenterState({
             principals: principalManager.getPrincipals(),
             representatives: representativeManager.getRepresentatives()
