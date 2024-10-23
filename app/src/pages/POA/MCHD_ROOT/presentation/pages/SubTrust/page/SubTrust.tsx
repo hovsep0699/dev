@@ -7,7 +7,7 @@ import ObservableComponent from "../../../observableComponent/observableComponen
 import {SubTrustPresenter} from "../presenter/SubTrustPresenter";
 import {SubTrustPresenterState} from "../presenter/SubTrustPresenterState";
 import GeneralSectionHeader from "../../Sections/page/GeneralSectionHeader";
-import {serviceLocator} from "../../../../di/app_component";
+import {poaConfig, serviceLocator} from "../../../../di/app_component";
 import {SectionPresenter} from "../../Sections/presenter/SectionPresenter";
 import {SubTrustPresenterViewModel} from "../presenter/SubTrustPresenterViewModel";
 
@@ -28,6 +28,10 @@ const SubTrust: React.FC<SubTrustProps> = ({
     paddingRight,
     paddingLeft
 }: SubTrustProps) => {
+    const isLoading = poaConfig.isInitialized;
+    if (isLoading) {
+        return <></>;
+    }
     return (
         <ObservableComponent<SubTrustPresenterViewModel, SubTrustPresenterState, SubTrustPresenter>
             builder={(state: SubTrustPresenterState) => (

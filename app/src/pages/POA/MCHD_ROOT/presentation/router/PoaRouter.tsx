@@ -5,16 +5,20 @@ import {Route, Switch} from "react-router-dom";
 import CreatePoaPage from "../pages/CreatePoa/page/CreatePoa";
 import SubTrustPage from "../pages/SubTrust/page/SubTrust";
 import React from "react";
-import {serviceLocator} from "../../di/app_component";
+import {poaConfig, serviceLocator} from "../../di/app_component";
 import {CreatePresenter} from "../pages/CreatePoa/presenter/createPresenter";
 import {SubTrustPresenter} from "../pages/SubTrust/presenter/SubTrustPresenter";
 import POADashboard from "../pages/POADashboard/page/POADashboard";
 import {DashboardPresenter} from "../pages/POADashboard/presenter/DashboardPresenter";
 
 export const PoaRouter = () => {
-    const createPresenter = serviceLocator.get(CreatePresenter);
-    const subTrustPresenter = serviceLocator.get(SubTrustPresenter);
-    const dashboardPresenter = serviceLocator.get(DashboardPresenter);
+    const isLoading = poaConfig.isInitialized;
+    if (isLoading) {
+        return <></>;
+    }
+    const createPresenter: CreatePresenter = serviceLocator.get<CreatePresenter>(CreatePresenter);
+    const subTrustPresenter: SubTrustPresenter = serviceLocator.get<SubTrustPresenter>(SubTrustPresenter);
+    const dashboardPresenter: DashboardPresenter = serviceLocator.get<DashboardPresenter>(DashboardPresenter);
     return (
         <Layout pageMenuHeader="МЧД" topBarHeading={'МЧД'}>
             <GlobalStateProvider>

@@ -6,7 +6,7 @@ import Button, {ButtonKinds} from "../../../../common/Button";
 import {IconCheck, IconClose} from "../../../../assets/icons";
 import {CreatePresenter} from "../presenter/createPresenter";
 import {CreatePresenterState} from "../presenter/createPresenterState";
-import {serviceLocator} from "../../../../di/app_component";
+import {poaConfig, serviceLocator} from "../../../../di/app_component";
 import {CreateService} from "../../../../core/network/CreateService";
 import {JsonCreateManager} from "../../../../core/JsonManager";
 import {CreatePresenterViewModel} from "../presenter/createPresenterViewModel";
@@ -21,7 +21,10 @@ const CreatePoa: React.FC<CreatePoaProps> = ({presenter}: CreatePoaProps) => {
     console.log("sssssss: ", presenter.getState().toFlatJson());
     const createService = serviceLocator.get(CreateService);
     const jsonCreate = serviceLocator.get(JsonCreateManager);
-
+    const isLoading = poaConfig.isInitialized;
+    if (isLoading) {
+        return <></>;
+    }
   return (
       <ObservableComponent<CreatePresenterViewModel, CreatePresenterState, CreatePresenter>
           builder={(state: CreatePresenterState)=> (

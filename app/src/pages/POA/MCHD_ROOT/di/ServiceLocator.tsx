@@ -3,7 +3,7 @@ import autobind from "autobind-decorator";
 type ServiceFactory<T> = (...args: any[]) => T;
 
 export class ServiceLocator {
-    private static instance: ServiceLocator;
+    private static instance?: ServiceLocator | null;
 
     private constructor() {}
 
@@ -12,7 +12,7 @@ export class ServiceLocator {
         if (!ServiceLocator.instance) {
             ServiceLocator.instance = new ServiceLocator();
         }
-        return ServiceLocator.instance;
+        return ServiceLocator.instance!;
     }
 
     private services: Map<string, { instance?: any; factory?: ServiceFactory<any>; args?: any[] }> = new Map();

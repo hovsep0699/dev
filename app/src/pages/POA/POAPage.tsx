@@ -1,6 +1,6 @@
 import React from 'react';
 import {RouteComponentProps} from 'react-router-dom';
-import {configureDependencies} from "./MCHD_ROOT/di/app_component";
+import {poaConfig} from "./MCHD_ROOT/di/app_component";
 import {PoaRouter} from "./MCHD_ROOT/presentation/router/PoaRouter";
 
 interface PoaPageState {
@@ -16,7 +16,7 @@ export  class POAPage extends React.Component<RouteComponentProps, PoaPageState>
         this.configure().then(()=>{});
     }
     async configure() {
-        await configureDependencies(); // If this function is asynchronous
+        await poaConfig.configureDependencies(); // If this function is asynchronous
         this.setState({ isLoading: false });
     }
 

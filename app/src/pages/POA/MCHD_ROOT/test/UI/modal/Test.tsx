@@ -2,7 +2,7 @@ import React, { Component, useEffect, useState } from "react";
 import { Box } from "grommet";
 import Button from "../../../common/Button";
 import Modal from "../../../common/Modal";
-import {configureDependencies, serviceLocator} from "../../../di/app_component";
+import {poaConfig, serviceLocator} from "../../../di/app_component";
 import {CreatePresenter} from "../../../presentation/pages/CreatePoa/presenter/createPresenter";
 import GlobalVariadicForm from "../../../presentation/components/forms/GlobalVariadicForm";
 
@@ -52,8 +52,11 @@ const ModalForm = ({defaultValues , fields , options , handleSubmit, closeModal 
     const title = 'TitleЗаголовок модального окна';
     const content = "lorem ipsum";
 
+    const config = async () =>{
+        await poaConfig.configureDependencies()
+    }
     useEffect(() => {
-        configureDependencies()
+        config().then(()=>{});
         const modalPortalTarget = document.createElement('div');
         modalPortalTarget.setAttribute('id', 'modals');
         document.body.appendChild(modalPortalTarget);

@@ -13,67 +13,91 @@ import {DashboardPresenter} from "../presentation/pages/POADashboard/presenter/D
 import {JsonCreateManager} from "../core/JsonManager";
 import {FormPresenter} from "../presentation/components/forms/presenter/FormPresenter";
 import {SubAdminManager} from "../core/SubAdminManager";
+import autobind from "autobind-decorator";
 
 
 export const serviceLocator = ServiceLocator.getInstance();
-export const configureDependencies = async () => {
-    await _configureBlob();
-    await _configureManagers();
-    await _configureNetworkClient();
-    await _configurePresenters();
-    await _configureJsonManager()
+
+export class PoaConfig {
+    private static instance: PoaConfig = new PoaConfig()
+    private isFinishInitialized: boolean;
+
+    private constructor() {
+        this.isFinishInitialized = false;
+    }
+
+    @autobind
+    public get isInitialized(): boolean {
+        return this.isFinishInitialized;
+    }
+
+    @autobind
+    public static getInstance(){
+        return PoaConfig.instance
+    }
+     async configureDependencies(){
+        await this._configureBlob();
+        await this._configureManagers();
+        await this._configureNetworkClient();
+        await this._configurePresenters();
+        await this._configureJsonManager()
+        this.isFinishInitialized = true;
+    }
+     async _configurePresenters() {
+        serviceLocator.registerSingleton(
+            CreatePresenter,
+            serviceLocator.get(PrincipalManager),
+            serviceLocator.get(RepresentativeManager)
+        );
+        serviceLocator.registerSingleton(
+            SubTrustPresenter,
+            serviceLocator.get(PrincipalManager),
+            serviceLocator.get(RepresentativeManager)
+        );
+        serviceLocator.registerSingleton(
+            SectionPresenter,
+            serviceLocator.get(PrincipalManager),
+            serviceLocator.get(RepresentativeManager)
+        );
+        serviceLocator.registerSingleton(
+            FormPresenter,
+            serviceLocator.get(PrincipalManager),
+            serviceLocator.get(RepresentativeManager),
+            serviceLocator.get(SubAdminManager)
+        );
+        serviceLocator.registerSingleton(
+            DashboardPresenter,
+            serviceLocator.get(PrincipalManager),
+            serviceLocator.get(RepresentativeManager)
+        );
+    }
+
+    async _configureNetworkClient()  {
+        serviceLocator.registerSingleton(AxiosClient, serviceLocator.get(BlobClient));
+        serviceLocator.registerSingleton(ApiClient, serviceLocator.get(AxiosClient));
+        serviceLocator.registerSingleton(CreateService, serviceLocator.get(ApiClient));
+    }
+
+    async _configureBlob() {
+        serviceLocator.registerSingleton(BlobClient);
+    }
+
+    async _configureManagers(){
+        serviceLocator.registerSingleton(RepresentativeManager, []);
+        serviceLocator.registerSingleton(PrincipalManager, [doveritel]);
+        serviceLocator.registerSingleton(SubAdminManager, []);
+
+    }
+
+    async _configureJsonManager() {
+        serviceLocator.registerSingleton(JsonCreateManager,
+            serviceLocator.get(CreatePresenter),
+            serviceLocator.get(SectionPresenter));
+    }
 }
 
-const _configurePresenters = async () => {
-    serviceLocator.registerSingleton(
-        CreatePresenter,
-        serviceLocator.get(PrincipalManager),
-        serviceLocator.get(RepresentativeManager)
-    );
-    serviceLocator.registerSingleton(
-        SubTrustPresenter,
-        serviceLocator.get(PrincipalManager),
-        serviceLocator.get(RepresentativeManager)
-    );
-    serviceLocator.registerSingleton(
-        SectionPresenter,
-        serviceLocator.get(PrincipalManager),
-        serviceLocator.get(RepresentativeManager)
-    );
-    serviceLocator.registerSingleton(
-        FormPresenter,
-        serviceLocator.get(PrincipalManager),
-        serviceLocator.get(RepresentativeManager),
-        serviceLocator.get(SubAdminManager)
-    );
-    serviceLocator.registerSingleton(
-        DashboardPresenter,
-        serviceLocator.get(PrincipalManager),
-        serviceLocator.get(RepresentativeManager)
-    );
-}
+export const poaConfig = PoaConfig.getInstance();
 
-const _configureNetworkClient = async () => {
-    serviceLocator.registerSingleton(AxiosClient, serviceLocator.get(BlobClient));
-    serviceLocator.registerSingleton(ApiClient, serviceLocator.get(AxiosClient));
-    serviceLocator.registerSingleton(CreateService, serviceLocator.get(ApiClient));
-}
 
-const _configureBlob = async () => {
-    serviceLocator.registerSingleton(BlobClient);
-}
-
-const _configureManagers = async () => {
-    serviceLocator.registerSingleton(RepresentativeManager, []);
-    serviceLocator.registerSingleton(PrincipalManager, [doveritel]);
-    serviceLocator.registerSingleton(SubAdminManager, []);
-
-}
-
-const _configureJsonManager = async () => {
-    serviceLocator.registerSingleton(JsonCreateManager,
-        serviceLocator.get(CreatePresenter),
-        serviceLocator.get(SectionPresenter));
-}
 
 

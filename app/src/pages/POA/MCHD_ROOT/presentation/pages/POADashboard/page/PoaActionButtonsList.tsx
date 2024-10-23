@@ -23,6 +23,7 @@ import {
   IconUpload
 } from "../../../../assets/icons";
 import {DashboardPresenter} from "../presenter/DashboardPresenter";
+import {poaConfig} from "../../../../di/app_component";
 
 
 interface PoaActionButtonsListProps {
@@ -243,7 +244,10 @@ const PoaActionButtonsList: React.FC<PoaActionButtonsListProps> = ({ selectedPoa
 
 
   const filteredButtons = buttonData.filter((button, _: any) => button.isShow)
-
+  const isLoading = poaConfig.isInitialized;
+  if (isLoading) {
+    return <></>;
+  }
   return (
     <>
       <Box  justify={"start"} direction={"row"} gap={"6px"} style={{margin: "0 20px", position: "relative"}}>
