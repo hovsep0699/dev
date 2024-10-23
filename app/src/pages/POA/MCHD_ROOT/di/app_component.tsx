@@ -19,7 +19,7 @@ import autobind from "autobind-decorator";
 export const serviceLocator = ServiceLocator.getInstance();
 
 export class PoaConfig {
-    private static instance: PoaConfig = new PoaConfig()
+    private static instance?: PoaConfig | null;
     private isFinishInitialized: boolean;
 
     private constructor() {
@@ -32,7 +32,10 @@ export class PoaConfig {
     }
 
     @autobind
-    public static getInstance(){
+    public static getInstance(): PoaConfig {
+        if (!PoaConfig.instance) {
+            PoaConfig.instance = new PoaConfig();
+        }
         return PoaConfig.instance
     }
      async configureDependencies(){
