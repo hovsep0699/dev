@@ -1,5 +1,5 @@
-import {ApiClient} from "@distate/app/src/pages/POA/MCHD_ROOT/core/client/ApiClient";
-import {ApiConstants} from "@distate/app/src/pages/POA/MCHD_ROOT/core/client/ApiConstants";
+import {ApiClient} from "../client/ApiClient";
+import {ApiConstants} from "../client/ApiConstants";
 import autobind from "autobind-decorator";
 
 export class CreateService {

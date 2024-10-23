@@ -1,21 +1,21 @@
 import React, {useEffect} from "react";
 import {Box} from "grommet";
-import {Label} from "@distate/app/src/pages/POA/MCHD_ROOT/common/CheckBox/CheckBox.styles";
-import Select from "@distate/app/src/pages/POA/MCHD_ROOT/common/Select";
-import {Input} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Input";
-import GeneralSectionHeaderActions from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/page/GeneralSectionHeaderActions";
+import {Label} from "../../../../common/CheckBox/CheckBox.styles";
+import Select from "../../../../common/Select";
+import {Input} from "../../../../common/Input";
+import GeneralSectionHeaderActions from "./GeneralSectionHeaderActions";
 
-import Button from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
-import {useDialog} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/useDialog";
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {reTrustOptions, typeOptions} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
-import {RequiredField} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/RequiredField";
-import {AttorneyDetails} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/AttorneyDetails";
-import {initialDetails} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/details/initialAttorneyDetails";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
-import {DatePickerNew} from "@distate/app/src/pages/POA/MCHD_ROOT/common/date-picker-new";
-import {SectionPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterViewModel";
+import Button from "../../../../common/Button";
+import {useDialog} from "../../dashboard/modals/useDialog";
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {reTrustOptions, typeOptions} from "../../../constants/SelectionConstants";
+import {RequiredField} from "../../../components/RequiredField";
+import {AttorneyDetails} from "../../../../domain/model/AttorneyDetails";
+import {initialDetails} from "../../../constants/details/initialAttorneyDetails";
+import {SectionPresenter} from "../presenter/SectionPresenter";
+import {SectionPresenterState} from "../presenter/SectionPresenterState";
+import {DatePickerNew} from "../../../../common/date-picker-new";
+import {SectionPresenterViewModel} from "../presenter/SectionPresenterViewModel";
 
 
 

@@ -1,4 +1,4 @@
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
+import {Principal} from "../model/Principal";
 
 
 export class PrincipalEntity {

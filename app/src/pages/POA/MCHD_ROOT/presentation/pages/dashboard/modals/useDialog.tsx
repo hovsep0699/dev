@@ -1,8 +1,9 @@
-import dialogManager from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/DialogManager';
+import dialogManager from './DialogManager';
 import React, {CSSProperties} from "react";
-import Modal from '@distate/app/src/pages/POA/MCHD_ROOT/common/Modal/Modal';
+import Modal from '../../../../common/Modal/Modal';
 import {AlignmentType} from "./Dialog";
-import {EdgeInsets} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/utils/EdgeInsets";
+import ReactDOM from "react-dom";
+import {EdgeInsets} from "../../../utils/EdgeInsets";
 
 
 export interface OpenDialogProps {

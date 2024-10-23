@@ -1,10 +1,10 @@
 import React from "react";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
-import GeneralSectionHeaderAction from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/page/GeneralSectionHeaderAction";
-import {Tax} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Tax";
-import {SectionPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterViewModel";
+import {SectionPresenter} from "../presenter/SectionPresenter";
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {SectionPresenterState} from "../presenter/SectionPresenterState";
+import GeneralSectionHeaderAction from "./GeneralSectionHeaderAction";
+import {Tax} from "../../../../domain/model/Tax";
+import {SectionPresenterViewModel} from "../presenter/SectionPresenterViewModel";
 
 interface GeneralSectionHeaderActionsProps {
     baseWidth?: string;

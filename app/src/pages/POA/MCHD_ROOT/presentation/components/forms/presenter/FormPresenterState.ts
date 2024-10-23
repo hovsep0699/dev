@@ -1,12 +1,12 @@
 import React from "react";
-import {FormPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/presenter/FormPresenterViewModel";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
+import {FormPresenterViewModel} from "./FormPresenterViewModel";
+import {Principal} from "../../../../domain/model/Principal";
+import {Representative} from "../../../../domain/model/Representative";
 import autobind from "autobind-decorator";
-import {SubAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SubAdmin";
-import {PrincipalAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/PrincipalAdmin";
-import {compareArrays} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState";
+import {SubAdmin} from "../../../../domain/model/SubAdmin";
+import {PrincipalAdmin} from "../../../../domain/model/PrincipalAdmin";
+import {compareArrays} from "../../../../utils/json_hepler";
+import {state} from "../../../presenter/BasicState";
 
 
 export class FormPresenterState implements state<FormPresenterState, FormPresenterViewModel> {

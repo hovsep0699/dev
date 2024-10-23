@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
 import "./CancelTextArea.css"
-import Button, { ButtonKinds } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button'
+import Button, { ButtonKinds } from '../../../../common/Button'
 import { Box } from 'grommet'
 import { Form, Formik } from 'formik'
-import {IDialogContentProps} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/IDialogContentProps";
+import {IDialogContentProps} from "./IDialogContentProps";
 import {Textarea} from "@distate/app/src/common/textarea/Textarea";
 
 const CancelModalContent: React.FC<IDialogContentProps> = ({hideDialog}: IDialogContentProps) => {

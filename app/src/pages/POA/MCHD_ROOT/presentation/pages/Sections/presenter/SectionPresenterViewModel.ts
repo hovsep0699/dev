@@ -1,8 +1,8 @@
-import {SelectionType} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {Info} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Info";
-import {Powers} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Powers";
+import {SelectionType} from "../../../../domain/model/SelectionType";
+import {Principal} from "../../../../domain/model/Principal";
+import {Representative} from "../../../../domain/model/Representative";
+import {Info} from "../../../../domain/model/Info";
+import {Powers} from "../../../../domain/model/Powers";
 
 export class SectionPresenterViewModel {
     principals?: Principal[] | null;

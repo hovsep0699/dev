@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Box } from 'grommet';
-import {Pagination, PaginationLimit} from "@distate/app/src/pages/POA/MCHD_ROOT/common/pagination";
-import { IconDownload, IconEye, IconPencil } from '@distate/app/src/pages/POA/MCHD_ROOT/assets/icons';
-import { ButtonWrapper } from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/page/PoaActionButtonsList';
-import {useGlobalState} from "@distate/app/src/pages/POA/MCHD_ROOT/mocks/context/GlobalState";
-import {DashboardPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenter";
+import {Pagination, PaginationLimit} from "../../../../common/pagination";
+import { IconDownload, IconEye, IconPencil } from '../../../../assets/icons';
+import { ButtonWrapper } from './PoaActionButtonsList';
+import {useGlobalState} from "../../../../mocks/context/GlobalState";
+import {DashboardPresenter} from "../presenter/DashboardPresenter";
 
 const TableContainer = styled.div`
   margin: 20px 20px;

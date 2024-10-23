@@ -1,5 +1,5 @@
 import autobind from "autobind-decorator";
-import {SubAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SubAdmin";
+import {SubAdmin} from "./SubAdmin";
 
 
 export class Admin {

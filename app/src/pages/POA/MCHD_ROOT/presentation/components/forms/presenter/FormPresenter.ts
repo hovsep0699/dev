@@ -1,14 +1,14 @@
 import React from "react";
 import {FormPresenterState} from "./FormPresenterState";
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import {PrincipalManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/PrincipalManager";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
+import {Presenter} from "../../../presenter/presenter";
+import {PrincipalManager} from "../../../../core/PrincipalManager";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {Representative} from "../../../../domain/model/Representative";
+import {Principal} from "../../../../domain/model/Principal";
 import autobind from "autobind-decorator";
-import {SubAdminManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/SubAdminManager";
-import {PrincipalAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/PrincipalAdmin";
-import {FormPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/presenter/FormPresenterViewModel";
+import {SubAdminManager} from "../../../../core/SubAdminManager";
+import {PrincipalAdmin} from "../../../../domain/model/PrincipalAdmin";
+import {FormPresenterViewModel} from "./FormPresenterViewModel";
 
 export class FormPresenter extends Presenter<FormPresenterViewModel, FormPresenterState> {
     private principalManager: PrincipalManager;

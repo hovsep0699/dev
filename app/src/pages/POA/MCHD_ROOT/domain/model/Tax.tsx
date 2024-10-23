@@ -1,4 +1,4 @@
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
+import {IModel} from "./IModel";
 import autobind from "autobind-decorator";
 
 export interface TaxProps {

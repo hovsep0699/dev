@@ -1,8 +1,8 @@
-import {getKeyOrNull} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
-import {FioJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/FioJsonConverter";
-import {AddressJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/AddressJsonConverter";
-import {ContactsJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/ContactsJsonConverter";
-import {IdentificationDocumentJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/IdentificationDocumentJsonConverter";
+import {getKeyOrNull} from "../../utils/string_helper";
+import {FioJsonConverter} from "./FioJsonConverter";
+import {AddressJsonConverter} from "./AddressJsonConverter";
+import {ContactsJsonConverter} from "./ContactsJsonConverter";
+import {IdentificationDocumentJsonConverter} from "./IdentificationDocumentJsonConverter";
 
 export class PersonalDataJsonConverter {
     public static toFlatJson(fields: Record<string, any>): Record<string, any> {

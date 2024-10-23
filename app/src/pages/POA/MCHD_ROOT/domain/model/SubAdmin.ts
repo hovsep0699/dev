@@ -1,6 +1,6 @@
 import autobind from "autobind-decorator";
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
-import {deepEqual} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
+import {IModel} from "./IModel";
+import {deepEqual} from "../../utils/json_hepler";
 
 export interface SubAdminProps {
     fields?: any | null;

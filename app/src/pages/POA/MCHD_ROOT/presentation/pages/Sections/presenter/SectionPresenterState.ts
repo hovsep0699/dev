@@ -1,12 +1,12 @@
-import {SectionPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterViewModel";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
+import {SectionPresenterViewModel} from "./SectionPresenterViewModel";
+import {Principal} from "../../../../domain/model/Principal";
+import {Representative} from "../../../../domain/model/Representative";
 import autobind from "autobind-decorator";
-import {Info} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Info";
-import {Powers} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Powers";
-import {SelectionType} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
-import {compareArrays} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState";
+import {Info} from "../../../../domain/model/Info";
+import {Powers} from "../../../../domain/model/Powers";
+import {SelectionType} from "../../../../domain/model/SelectionType";
+import {compareArrays} from "../../../../utils/json_hepler";
+import {state} from "../../../presenter/BasicState";
 
 export class SectionPresenterState implements state<SectionPresenterState, SectionPresenterViewModel>{
     public principals: Principal[];

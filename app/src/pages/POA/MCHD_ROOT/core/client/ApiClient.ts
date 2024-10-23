@@ -1,5 +1,5 @@
-import {ServiceLocator} from "@distate/app/src/pages/POA/MCHD_ROOT/di/ServiceLocator";
-import AxiosClient from "@distate/app/src/pages/POA/MCHD_ROOT/core/client/AxiosClient";
+import {ServiceLocator} from "../../di/ServiceLocator";
+import AxiosClient from "./AxiosClient";
 import autobind from "autobind-decorator";
 
 export class ApiClient {

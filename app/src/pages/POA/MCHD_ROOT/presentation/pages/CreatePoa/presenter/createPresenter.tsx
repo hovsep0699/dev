@@ -1,12 +1,12 @@
 import React from "react";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import {PrincipalManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/PrincipalManager";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
+import {CreatePresenterState} from "./createPresenterState";
+import {Presenter} from "../../../presenter/presenter";
+import {PrincipalManager} from "../../../../core/PrincipalManager";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {Representative} from "../../../../domain/model/Representative";
+import {Principal} from "../../../../domain/model/Principal";
 import autobind from "autobind-decorator";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
+import {CreatePresenterViewModel} from "./createPresenterViewModel";
 
 export class CreatePresenter extends Presenter<CreatePresenterViewModel, CreatePresenterState> {
     private principalManager: PrincipalManager;

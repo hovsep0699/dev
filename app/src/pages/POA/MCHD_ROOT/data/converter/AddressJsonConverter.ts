@@ -1,4 +1,4 @@
-import {getKeyOrNull, joinStrings} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
+import {getKeyOrNull, joinStrings} from "../../utils/string_helper";
 
 export class AddressJsonConverter {
     public static toFlatJson(fields: Record<string, any>): Record<string, any> {

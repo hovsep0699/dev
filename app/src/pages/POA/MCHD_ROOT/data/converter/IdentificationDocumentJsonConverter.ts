@@ -1,4 +1,4 @@
-import {getKeyOrNull} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
+import {getKeyOrNull} from "../../utils/string_helper";
 
 export class IdentificationDocumentJsonConverter {
     public static toFlatJson(fields: Record<string, any>): Record<string, any> {

@@ -1,18 +1,18 @@
 import React from 'react';
-import Button, { ButtonKinds, ButtonSizes } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button';
+import Button, { ButtonKinds, ButtonSizes } from '../../../../common/Button';
 import styled from 'styled-components';
 
-import { IButton } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button/Button';
-import Dialog from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/Dialog";
-import SearchModalContent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/SearchModalContent";
-import AddModalContent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/AddModalContent";
-import DownloadModalContent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/DownloadModalContent";
-import {OpenDialogProps, useDialog} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/useDialog";
+import { IButton } from '../../../../common/Button/Button';
+import Dialog from "../../dashboard/modals/Dialog";
+import SearchModalContent from "../../dashboard/modals/SearchModalContent";
+import AddModalContent from "../../dashboard/modals/AddModalContent";
+import DownloadModalContent from "../../dashboard/modals/DownloadModalContent";
+import {OpenDialogProps, useDialog} from "../../dashboard/modals/useDialog";
 import { Link } from 'react-router-dom';
-import CancelModalContent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/CancelModalContent";
+import CancelModalContent from "../../dashboard/modals/CancelModalContent";
 import {Box} from "grommet";
 import ReactDOM from "react-dom";
-import {EdgeInsets} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/utils/EdgeInsets";
+import {EdgeInsets} from "../../../utils/EdgeInsets";
 import {
   IconArrowUp, IconBackLeft, IconCheckBox,
   IconMarkerAlt,

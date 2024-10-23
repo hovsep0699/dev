@@ -1,14 +1,14 @@
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import {SelectionType} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {PrincipalManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/PrincipalManager";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
+import {Presenter} from "../../../presenter/presenter";
+import {SelectionType} from "../../../../domain/model/SelectionType";
+import {SectionPresenterState} from "./SectionPresenterState";
+import {Representative} from "../../../../domain/model/Representative";
+import {PrincipalManager} from "../../../../core/PrincipalManager";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {Principal} from "../../../../domain/model/Principal";
 import autobind from "autobind-decorator";
-import {Info} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Info";
-import {Powers} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Powers";
-import {SectionPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterViewModel";
+import {Info} from "../../../../domain/model/Info";
+import {Powers} from "../../../../domain/model/Powers";
+import {SectionPresenterViewModel} from "./SectionPresenterViewModel";
 
 export class SectionPresenter extends Presenter<SectionPresenterViewModel, SectionPresenterState> {
     private principalManager: PrincipalManager;

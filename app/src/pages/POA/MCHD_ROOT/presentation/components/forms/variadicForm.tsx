@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Box } from 'grommet';
-import SelectField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/SelectField";
-import InputField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/InputField";
-import {DatePicker} from "@distate/app/src/pages/POA/MCHD_ROOT/common/DatePicker";
-import Button, {ButtonKinds} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
+import {useGlobalState} from "../../../mocks/context/GlobalState";
+import SelectField from "../../../common/Form/fields/SelectField";
+import InputField from "../../../common/Form/fields/InputField";
+import {DatePicker} from "../../../common/DatePicker";
+import Button, {ButtonKinds} from "../../../common/Button";
 
 // Function to build validation schema based on fields
 const buildValidationSchema = (fields: any) => {

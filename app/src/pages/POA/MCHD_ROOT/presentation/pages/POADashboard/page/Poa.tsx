@@ -1,7 +1,7 @@
 import React from 'react'
-import PoaActionButtonsList from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/page/PoaActionButtonsList'
-import PoaTable from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/page/PoaTable'
-import {DashboardPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenter";
+import PoaActionButtonsList from './PoaActionButtonsList'
+import PoaTable from './PoaTable'
+import {DashboardPresenter} from "../presenter/DashboardPresenter";
 
 interface POAProps {
   presenter: DashboardPresenter;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {EdgeInsets} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/utils/EdgeInsets";
+import {EdgeInsets} from "../../../utils/EdgeInsets";
 
 interface  DialogOverlayProps {
     overlayColor?: string;

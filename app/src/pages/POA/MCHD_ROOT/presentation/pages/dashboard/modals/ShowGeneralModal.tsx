@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import GeneralModal from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/GeneralModal";
+import GeneralModal from "./GeneralModal";
 
 interface ShowGeneralModalProps {
     isOpen?: boolean;

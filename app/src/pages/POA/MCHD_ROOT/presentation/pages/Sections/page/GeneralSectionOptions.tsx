@@ -1,9 +1,9 @@
 import React from "react";
 import {Box} from "grommet";
-import Button from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
-import {IconPencil, IconPlus, IconTrash} from "@distate/app/src/pages/POA/MCHD_ROOT/assets/icons";
-import {RequiredField} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/RequiredField";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
+import Button from "../../../../common/Button";
+import {IconPencil, IconPlus, IconTrash} from "../../../../assets/icons";
+import {RequiredField} from "../../../components/RequiredField";
+import {SectionPresenter} from "../presenter/SectionPresenter";
 
 
 interface GeneralSectionOptions {

@@ -1,6 +1,7 @@
 import React from 'react';
 import autobind from "autobind-decorator";
-import {BaseDialog} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/dialog";
+import Dialog from "./Dialog";
+import {BaseDialog} from "../../../../domain/model/dialog";
 
 interface DialogModelProps {
     dialog?: React.ReactNode | null;

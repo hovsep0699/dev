@@ -1,11 +1,11 @@
-import {Tax} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Tax";
+import {Tax} from "../../../../domain/model/Tax";
 import React from "react";
 import {Box} from "grommet";
-import {Label} from "@distate/app/src/pages/POA/MCHD_ROOT/common/CheckBox/CheckBox.styles";
-import {RequiredField} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/RequiredField";
-import {Input} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Input";
-import Button from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
-import {IconPlus, IconTrash} from "@distate/app/src/pages/POA/MCHD_ROOT/assets/icons";
+import {Label} from "../../../../common/CheckBox/CheckBox.styles";
+import {RequiredField} from "../../../components/RequiredField";
+import {Input} from "../../../../common/Input";
+import Button from "../../../../common/Button";
+import {IconPlus, IconTrash} from "../../../../assets/icons";
 
 interface GeneralSectionHeaderActionProps {
     baseWidth?: string;

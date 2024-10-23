@@ -5,20 +5,20 @@ import {
     powersSubTrustType,
     reTrustOptions,
     typeOptions
-} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
+} from "../../../constants/SelectionConstants";
 
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {SectionPresenterState} from "../presenter/SectionPresenterState";
+import {SectionPresenter} from "../presenter/SectionPresenter";
 import {Box} from "grommet";
-import {RequiredField} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/RequiredField";
-import {Label} from "@distate/app/src/pages/POA/MCHD_ROOT/common/CheckBox/CheckBox.styles";
-import Select from "@distate/app/src/pages/POA/MCHD_ROOT/common/Select";
-import HierarchicalDropdown from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/Individual/HierarchicalDropdown";
-import {Textarea} from "@distate/app/src/common/textarea/Textarea";
-import {SelectionType} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
-import {mockPowersData} from "@distate/app/src/pages/POA/MCHD_ROOT/mocks/data/dropdownData";
-import {SectionPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterViewModel";
+import {RequiredField} from "../../../components/RequiredField";
+import {Label} from "../../../../common/CheckBox/CheckBox.styles";
+import Select from "../../../../common/Select";
+import HierarchicalDropdown from "../../CreatePoa/Individual/HierarchicalDropdown";
+import {Textarea} from "../../../../../../../common/textarea/Textarea";
+import {SelectionType} from "../../../../domain/model/SelectionType";
+import {mockPowersData} from "../../../../mocks/data/dropdownData";
+import {SectionPresenterViewModel} from "../presenter/SectionPresenterViewModel";
 
 interface GeneralSectionsFooterProps {
     presenter: SectionPresenter;

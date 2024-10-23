@@ -1,9 +1,9 @@
 import React from 'react'
-import Button, { ButtonKinds } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button'
+import Button, { ButtonKinds } from '../../../../common/Button'
 import { Box } from 'grommet'
-import { InputField } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Form'
+import { InputField } from '../../../../common/Form'
 import { Form, Formik } from 'formik'
-import {IDialogContentProps} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/IDialogContentProps";
+import {IDialogContentProps} from "./IDialogContentProps";
 
 const AddModalContent: React.FC<IDialogContentProps> = ({hideDialog}: IDialogContentProps) => {
   

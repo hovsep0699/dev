@@ -1,10 +1,10 @@
 import { Box } from 'grommet'
 import React from 'react'
-import {RequiredField} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/RequiredField";
-import {Label} from "@distate/app/src/pages/POA/MCHD_ROOT/common/CheckBox/CheckBox.styles";
-import {genderOptions} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
-import Select from "@distate/app/src/pages/POA/MCHD_ROOT/common/Select";
-import {Input} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Input";
+import {RequiredField} from "../../../components/RequiredField";
+import {Label} from "../../../../common/CheckBox/CheckBox.styles";
+import {genderOptions} from "../../../constants/SelectionConstants";
+import Select from "../../../../common/Select";
+import {Input} from "../../../../common/Input";
 
 function IndividualPageHeader({baseWidth}: any) {
     const [value, setValue] = React.useState(genderOptions[0]);

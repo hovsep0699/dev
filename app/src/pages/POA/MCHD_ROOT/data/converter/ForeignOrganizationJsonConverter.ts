@@ -1,6 +1,6 @@
-import {getKeyOrNull} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
-import {AddressJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/AddressJsonConverter";
-import {ContactsJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/ContactsJsonConverter";
+import {getKeyOrNull} from "../../utils/string_helper";
+import {AddressJsonConverter} from "./AddressJsonConverter";
+import {ContactsJsonConverter} from "./ContactsJsonConverter";
 
 export class ForeignOrganizationJsonConverter {
     public static toFlatJson(fields: Record<string, any>): Record<string, any> {

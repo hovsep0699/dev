@@ -7,7 +7,7 @@ import {
     ModalFooter,
     ModalHeader,
     ModalTitle
-} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/GeneralModal.styles"
+} from "./GeneralModal.styles"
 
 
 interface GeneralModalProps {

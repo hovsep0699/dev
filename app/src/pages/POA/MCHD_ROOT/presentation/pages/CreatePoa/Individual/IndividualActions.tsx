@@ -1,16 +1,16 @@
 import { Box } from 'grommet'
 import React from 'react'
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import {CreatePresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenter";
-import PrincipalSection from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/sections/PrincipalSection";
-import RepresevtativeSection from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/sections/RepresevtativeSection";
-import {GeneralSectionsFooter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/page/GeneralSectionFooter";
-import {serviceLocator} from "@distate/app/src/pages/POA/MCHD_ROOT/di/app_component";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {PrincipalManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/PrincipalManager";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {CreatePresenterState} from "../presenter/createPresenterState";
+import {CreatePresenter} from "../presenter/createPresenter";
+import PrincipalSection from "../../../components/forms/sections/PrincipalSection";
+import RepresevtativeSection from "../../../components/forms/sections/RepresevtativeSection";
+import {GeneralSectionsFooter} from "../../Sections/page/GeneralSectionFooter";
+import {serviceLocator} from "../../../../di/app_component";
+import {SectionPresenter} from "../../Sections/presenter/SectionPresenter";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {PrincipalManager} from "../../../../core/PrincipalManager";
+import {CreatePresenterViewModel} from "../presenter/createPresenterViewModel";
 
 
 

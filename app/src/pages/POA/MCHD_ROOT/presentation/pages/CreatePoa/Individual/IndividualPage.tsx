@@ -1,14 +1,14 @@
 import React from 'react';
 import { Box } from 'grommet';
 
-import IndividualActions from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/Individual/IndividualActions';
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import {CreatePresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenter";
-import GeneralSectionHeader from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/page/GeneralSectionHeader";
-import {serviceLocator} from "@distate/app/src/pages/POA/MCHD_ROOT/di/app_component";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
+import IndividualActions from './IndividualActions';
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {CreatePresenterState} from "../presenter/createPresenterState";
+import {CreatePresenter} from "../presenter/createPresenter";
+import GeneralSectionHeader from "../../Sections/page/GeneralSectionHeader";
+import {serviceLocator} from "../../../../di/app_component";
+import {SectionPresenter} from "../../Sections/presenter/SectionPresenter";
+import {CreatePresenterViewModel} from "../presenter/createPresenterViewModel";
 
 interface IndividualPageProps {
     presenter: CreatePresenter;

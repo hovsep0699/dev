@@ -1,5 +1,5 @@
 import * as Yup from "yup";
-import {AddressType} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
+import {AddressType} from "../SelectionConstants";
 
 export const AddressValidationScheme = {
     regionCode: Yup.string().when(['type', 'addressType', 'Index', 'Province', 'city', 'settlement', 'street', 'house', 'block', 'flat', 'fiasId', 'fiasText'], {

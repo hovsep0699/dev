@@ -2,12 +2,12 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Box } from 'grommet';
-import { SelectField } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Form';
-import DateInputField from '@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/DateInputField';
-import Button, { ButtonKinds } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button';
-import {IDialogContentProps} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/IDialogContentProps";
-import {IconClose, IconSearch} from "@distate/app/src/pages/POA/MCHD_ROOT/assets/icons";
-import {POAType} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
+import { SelectField } from '../../../../common/Form';
+import DateInputField from '../../../../common/Form/fields/DateInputField';
+import Button, { ButtonKinds } from '../../../../common/Button';
+import {IDialogContentProps} from "../modals/IDialogContentProps";
+import {IconClose, IconSearch} from "../../../../assets/icons";
+import {POAType} from "../../../constants/SelectionConstants";
 
 
 export default {

@@ -1,11 +1,11 @@
 import autobind from "autobind-decorator";
-import {getKeyOrNull} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
-import {PersonalDataJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/PersonalDataJsonConverter";
-import {PowerDocumentJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/PowerDocumentJsonConverter";
-import {OrganizationJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/OrganizationJsonConverter";
-import {SubAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SubAdmin";
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
-import {compareArrays, deepEqual} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
+import {getKeyOrNull} from "../../utils/string_helper";
+import {PersonalDataJsonConverter} from "../../data/converter/PersonalDataJsonConverter";
+import {PowerDocumentJsonConverter} from "../../data/converter/PowerDocumentJsonConverter";
+import {OrganizationJsonConverter} from "../../data/converter/OrganizationJsonConverter";
+import {SubAdmin} from "./SubAdmin";
+import {IModel} from "./IModel";
+import {compareArrays, deepEqual} from "../../utils/json_hepler";
 
 export interface PrincipalAdminProps {
     admins?: SubAdmin[] | null;

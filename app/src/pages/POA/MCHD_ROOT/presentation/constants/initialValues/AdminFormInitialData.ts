@@ -1,5 +1,6 @@
+// import { genderOptions } from "../../LegalEntity/LegalEntityPage";
 import * as Yup from 'yup';
-import {PrincipalULAdminTypes} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/options/types";
+import {PrincipalULAdminTypes} from "../options/types";
 
 
 

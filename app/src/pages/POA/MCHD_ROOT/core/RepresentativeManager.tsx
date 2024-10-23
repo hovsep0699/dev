@@ -1,4 +1,4 @@
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
+import {Representative} from "../domain/model/Representative";
 import autobind from "autobind-decorator";
 
 export  class RepresentativeManager {

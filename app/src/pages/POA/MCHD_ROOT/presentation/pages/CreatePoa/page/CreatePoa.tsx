@@ -1,15 +1,15 @@
 import React  from 'react'
 import { Box } from 'grommet';
-import IndividualPage from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/Individual/IndividualPage';
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import Button, {ButtonKinds} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
-import {IconCheck, IconClose} from "@distate/app/src/pages/POA/MCHD_ROOT/assets/icons";
-import {CreatePresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenter";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import {serviceLocator} from "@distate/app/src/pages/POA/MCHD_ROOT/di/app_component";
-import {CreateService} from "@distate/app/src/pages/POA/MCHD_ROOT/core/network/CreateService";
-import {JsonCreateManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/JsonManager";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
+import IndividualPage from '../Individual/IndividualPage';
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import Button, {ButtonKinds} from "../../../../common/Button";
+import {IconCheck, IconClose} from "../../../../assets/icons";
+import {CreatePresenter} from "../presenter/createPresenter";
+import {CreatePresenterState} from "../presenter/createPresenterState";
+import {serviceLocator} from "../../../../di/app_component";
+import {CreateService} from "../../../../core/network/CreateService";
+import {JsonCreateManager} from "../../../../core/JsonManager";
+import {CreatePresenterViewModel} from "../presenter/createPresenterViewModel";
 
 
 interface CreatePoaProps {

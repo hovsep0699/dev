@@ -1,7 +1,7 @@
 import {Box} from 'grommet';
 import React from 'react';
-import Button from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button';
-import {IconMinus, IconPencil, IconPlus} from '@distate/app/src/pages/POA/MCHD_ROOT/assets/icons';
+import Button from '../../../../common/Button';
+import {IconMinus, IconPencil, IconPlus} from '../../../../assets/icons';
 
 function AdminSectionForm({
                               setFieldValue,

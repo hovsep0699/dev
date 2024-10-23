@@ -1,18 +1,18 @@
 import React from 'react';
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {CreatePresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenter";
-import {useDialog} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/useDialog";
-import GlobalVariadicForm from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/GlobalVariadicForm";
-import {representativeOptions} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/options/options";
-import {RepresentativetypeOptions} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/initialValues/RepresentativeFormInitialValues";
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import ModalFormFooter from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/widgets/ModlFormFooter";
-import GeneralSectionOptions from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/page/GeneralSectionOptions";
-import {serviceLocator} from "@distate/app/src/pages/POA/MCHD_ROOT/di/app_component";
-import {SectionPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenter";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
+import {Representative} from "../../../../domain/model/Representative";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {CreatePresenter} from "../../../pages/CreatePoa/presenter/createPresenter";
+import {useDialog} from "../../../pages/dashboard/modals/useDialog";
+import GlobalVariadicForm from "../GlobalVariadicForm";
+import {representativeOptions} from "../../../constants/options/options";
+import {RepresentativetypeOptions} from "../../../constants/initialValues/RepresentativeFormInitialValues";
+import ObservableComponent from "../../../observableComponent/observableComponent";
+import {CreatePresenterState} from "../../../pages/CreatePoa/presenter/createPresenterState";
+import ModalFormFooter from "../../../widgets/ModlFormFooter";
+import GeneralSectionOptions from "../../../pages/Sections/page/GeneralSectionOptions";
+import {serviceLocator} from "../../../../di/app_component";
+import {SectionPresenter} from "../../../pages/Sections/presenter/SectionPresenter";
+import {CreatePresenterViewModel} from "../../../pages/CreatePoa/presenter/createPresenterViewModel";
 
 interface RepresentativeSectionProps {
     representatives?: Representative[];

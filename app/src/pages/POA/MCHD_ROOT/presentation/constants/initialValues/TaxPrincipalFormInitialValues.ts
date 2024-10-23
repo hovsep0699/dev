@@ -1,5 +1,6 @@
+// import { genderOptions } from "../../LegalEntity/LegalEntityPage";
 import * as Yup from 'yup';
-import { citizenshipOptions, documentCodeOptions, nationalityOptions } from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/initialValues/AdminFormInitialData';
+import { citizenshipOptions, documentCodeOptions, nationalityOptions } from './AdminFormInitialData';
 
 
   const genderOptions = [

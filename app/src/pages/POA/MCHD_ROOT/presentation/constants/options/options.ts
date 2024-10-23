@@ -1,7 +1,7 @@
-import { AdminFlFields, AdminIPFields, AdminUlFields } from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/initialValues/AdminFormInitialData";
-import { PrincipalInulFields, PrincipalIPFields, PrincipalUlFields } from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/initialValues/PrincipalFormInitialValues";
+import { AdminFlFields, AdminIPFields, AdminUlFields } from "../initialValues/AdminFormInitialData";
+import { PrincipalInulFields, PrincipalIPFields, PrincipalUlFields } from "../initialValues/PrincipalFormInitialValues";
 import { RepresentativeFilealInulFields, RepresentativeFilealUlFields, RepresentativeflFields, RepresentativeIPFields, RepresentativeUlFields } from "../initialValues/RepresentativeFormInitialValues";
-import {PrincipalTypes, PrincipalULAdminTypes, RepresentativeTypes} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/options/types";
+import {PrincipalTypes, PrincipalULAdminTypes, RepresentativeTypes} from "./types";
 
 
 

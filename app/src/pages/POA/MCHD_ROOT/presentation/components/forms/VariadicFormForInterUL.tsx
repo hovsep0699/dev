@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Box } from 'grommet';
-import {useGlobalState} from "@distate/app/src/pages/POA/MCHD_ROOT/mocks/context/GlobalState";
-import {AdminInulFields, inUlAdminOptions} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/initialValues/AdminFormInitialData";
-import SelectField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/SelectField";
-import InputField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/InputField";
-import {DatePicker} from "@distate/app/src/pages/POA/MCHD_ROOT/common/DatePicker";
-import Button, {ButtonKinds} from "@distate/app/src/pages/POA/MCHD_ROOT/common/Button";
+import {useGlobalState} from "../../../mocks/context/GlobalState";
+import {AdminInulFields, inUlAdminOptions} from "../../constants/initialValues/AdminFormInitialData";
+import SelectField from "../../../common/Form/fields/SelectField";
+import InputField from "../../../common/Form/fields/InputField";
+import {DatePicker} from "../../../common/DatePicker";
+import Button, {ButtonKinds} from "../../../common/Button";
 
 const buildValidationSchema = (fields: any) => {
   return fields.reduce((schema: any, field: any) => {

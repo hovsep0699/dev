@@ -1,11 +1,11 @@
 import autobind from "autobind-decorator";
-import {CreatePresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenter";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
-import {CreatePresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterState";
-import {IJsonManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/IJsonManager";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {cleanObject} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
+import {CreatePresenter} from "../presentation/pages/CreatePoa/presenter/createPresenter";
+import {SectionPresenterState} from "../presentation/pages/Sections/presenter/SectionPresenterState";
+import {CreatePresenterState} from "../presentation/pages/CreatePoa/presenter/createPresenterState";
+import {IJsonManager} from "./IJsonManager";
+import {Principal} from "../domain/model/Principal";
+import {Representative} from "../domain/model/Representative";
+import {cleanObject} from "../utils/json_hepler";
 
 
 export class JsonCreateManager extends IJsonManager<CreatePresenter> {

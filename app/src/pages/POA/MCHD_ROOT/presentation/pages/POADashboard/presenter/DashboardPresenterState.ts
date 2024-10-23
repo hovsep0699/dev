@@ -1,10 +1,10 @@
 import React from "react";
-import {DashboardPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenterViewModel";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
+import {DashboardPresenterViewModel} from "./DashboardPresenterViewModel";
+import {Principal} from "../../../../domain/model/Principal";
+import {Representative} from "../../../../domain/model/Representative";
 import autobind from "autobind-decorator";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState"
-import {compareArrays} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
+import {state} from "../../../presenter/BasicState"
+import {compareArrays} from "../../../../utils/json_hepler";
 
 export class DashboardPresenterState implements state<DashboardPresenterState, DashboardPresenterViewModel>{
     public principals: Principal[];

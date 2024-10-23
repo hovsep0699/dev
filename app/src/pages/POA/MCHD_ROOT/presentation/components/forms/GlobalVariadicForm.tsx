@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { Box } from 'grommet';
-import AdminSectionForm from '@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/sections/AdminSectionForm';
-import "@distate/app/src/pages/POA/MCHD_ROOT/presentation/components/forms/globalVariadicForm.css"
-import SelectField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/SelectField";
-import InputField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/fields/InputField";
-import {DatePickerNew} from "@distate/app/src/pages/POA/MCHD_ROOT/common/date-picker-new";
-import InputMaskField from "@distate/app/src/pages/POA/MCHD_ROOT/common/Form/InputMaskField/InputMaskField";
+import AdminSectionForm from './sections/AdminSectionForm';
+import "./globalVariadicForm.css"
+import SelectField from "../../../common/Form/fields/SelectField";
+import InputField from "../../../common/Form/fields/InputField";
+import {DatePickerNew} from "../../../common/date-picker-new";
+import InputMaskField from "../../../common/Form/InputMaskField/InputMaskField";
 import {format, parse} from "date-fns";
-import {AddressValidationScheme} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/ValidationScheme/AddressValidationScheme";
-import {AddressType, addressTypes} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/SelectionConstants";
-import {PersonalDocumentValidationScheme} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/ValidationScheme/PersonalDocumentValidationScheme";
+import {AddressValidationScheme} from "../../constants/ValidationScheme/AddressValidationScheme";
+import {AddressType, addressTypes} from "../../constants/SelectionConstants";
+import {PersonalDocumentValidationScheme} from "../../constants/ValidationScheme/PersonalDocumentValidationScheme";
 
 
 

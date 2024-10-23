@@ -19,7 +19,7 @@ export class ErrorBoundary extends React.Component {
   
   render() {
     if (this.state.hasError) {
-      // history.push('/auth')
+      history.push('/auth')
     }
 
     return this.props.children; 

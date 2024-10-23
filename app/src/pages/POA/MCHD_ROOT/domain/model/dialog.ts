@@ -1,4 +1,4 @@
-import {IModelBase} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
+import {IModelBase} from "./IModel";
 import React from "react";
 import autobind from "autobind-decorator";
 

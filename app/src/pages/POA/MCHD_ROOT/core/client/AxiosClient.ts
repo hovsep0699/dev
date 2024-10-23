@@ -19,6 +19,9 @@ class AxiosClient {
             timeout: 10000,
         });
         this.blobClient = blobClient;
+        this.get = this.get.bind(this);
+        this.post = this.post.bind(this);
+        this.delete = this.delete.bind(this);
 
         // Setup interceptors
         this.setupInterceptors();

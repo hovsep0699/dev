@@ -1,4 +1,4 @@
-import {AttorneyDetails} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/AttorneyDetails";
+import {AttorneyDetails} from "../../../domain/model/AttorneyDetails";
 
 export const initialDetails: AttorneyDetails[] = [
     {label: "ИНН/КПП", value: "Lorep ipsum"},

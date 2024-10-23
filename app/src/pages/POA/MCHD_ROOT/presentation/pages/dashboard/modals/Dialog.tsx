@@ -4,10 +4,10 @@ import {
     DialogActionsContainer,
     DialogContainer,
     DialogOverlay
-} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/dialog.styles";
+} from "./dialog.styles";
 import {Box} from "grommet";
-import SingleChildScrollView from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/widgets/SingleChildScrollView";
-import {EdgeInsets} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/utils/EdgeInsets";
+import SingleChildScrollView from "../../../widgets/SingleChildScrollView";
+import {EdgeInsets} from "../../../utils/EdgeInsets";
 
 
 

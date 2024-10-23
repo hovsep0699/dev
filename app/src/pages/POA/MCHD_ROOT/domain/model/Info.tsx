@@ -1,7 +1,7 @@
-import {Tax} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Tax";
+import {Tax} from "./Tax";
 import autobind from "autobind-decorator";
-import {formatDateToDDMMYYYY} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/date_helper";
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
+import {formatDateToDDMMYYYY} from "../../utils/date_helper";
+import {IModel} from "./IModel";
 
 
 

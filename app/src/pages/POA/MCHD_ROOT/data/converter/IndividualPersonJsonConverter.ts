@@ -1,5 +1,5 @@
-import {getKeyOrNull} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/string_helper";
-import {PersonalDataJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/PersonalDataJsonConverter";
+import {getKeyOrNull} from "../../utils/string_helper";
+import {PersonalDataJsonConverter} from "./PersonalDataJsonConverter";
 
 export class IndividualPersonJsonConverter {
     public static toFlatJson(fields: Record<string, any>): Record<string, any> {

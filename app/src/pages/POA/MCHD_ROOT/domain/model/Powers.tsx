@@ -3,8 +3,9 @@ import {
     PowersExercisedSelectionType, PowersExercisedType,
     PowersSelectionType,
     PowersSubTrustSelectionType, PowersSubTrustType,
-} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
+} from "./SelectionType";
+import {deepEqual} from "../../utils/json_hepler";
+import {IModel} from "./IModel";
 
 export interface PowersProps {
     type?: PowersSelectionType | null;

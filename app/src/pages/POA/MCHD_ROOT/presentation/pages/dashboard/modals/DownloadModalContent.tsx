@@ -1,7 +1,7 @@
 import React from 'react'
-import Button, { ButtonKinds } from '@distate/app/src/pages/POA/MCHD_ROOT/common/Button'
+import Button, { ButtonKinds } from '../../../../common/Button'
 import { Box } from 'grommet'
-import {IDialogContentProps} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/dashboard/modals/IDialogContentProps";
+import {IDialogContentProps} from "./IDialogContentProps";
 
 const DownloadModalContent: React.FC<IDialogContentProps> = ({hideDialog}: IDialogContentProps) => {
   

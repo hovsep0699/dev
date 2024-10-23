@@ -1,9 +1,9 @@
 import React from "react";
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import ObservableComponent from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/observableComponent/observableComponent";
+import {Presenter} from "../presenter/presenter";
+import ObservableComponent from "./observableComponent";
 import autobind from "autobind-decorator";
-import {deepEqual} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState";
+import {deepEqual} from "../../utils/json_hepler";
+import {state} from "../presenter/BasicState";
 
 export interface TestPresenterViewModel {
     x?: number | null;

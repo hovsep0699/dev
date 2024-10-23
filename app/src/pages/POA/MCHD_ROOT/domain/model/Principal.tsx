@@ -1,12 +1,12 @@
 import autobind from "autobind-decorator";
-import {PrincipalEntity} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/entity/PrincipalEntity";
-import {PrincipalAdmin} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/PrincipalAdmin";
-import {ForeignOrganizationJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/ForeignOrganizationJsonConverter";
-import {OrganizationJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/OrganizationJsonConverter";
-import {IndividualPersonJsonConverter} from "@distate/app/src/pages/POA/MCHD_ROOT/data/converter/IndividualPersonJsonConverter";
-import {PrincipalTypes} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/constants/options/types";
-import {compareArrays, deepEqual} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
-import {IModel} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/IModel";
+import {PrincipalEntity} from "../entity/PrincipalEntity";
+import {PrincipalAdmin} from "./PrincipalAdmin";
+import {ForeignOrganizationJsonConverter} from "../../data/converter/ForeignOrganizationJsonConverter";
+import {OrganizationJsonConverter} from "../../data/converter/OrganizationJsonConverter";
+import {IndividualPersonJsonConverter} from "../../data/converter/IndividualPersonJsonConverter";
+import {PrincipalTypes} from "../../presentation/constants/options/types";
+import {compareArrays, deepEqual} from "../../utils/json_hepler";
+import {IModel} from "./IModel";
 
 export interface PrincipalProps {
     admins?: PrincipalAdmin[] | null

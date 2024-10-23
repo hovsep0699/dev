@@ -1,10 +1,10 @@
 import React from "react";
-import {CreatePresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/CreatePoa/presenter/createPresenterViewModel";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT//domain/model/Principal";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
+import {CreatePresenterViewModel} from "./createPresenterViewModel";
+import {Principal} from "../../../../domain/model/Principal";
+import {Representative} from "../../../../domain/model/Representative";
 import autobind from "autobind-decorator";
-import {compareArrays} from "@distate/app/src/pages/POA/MCHD_ROOT/utils/json_hepler";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState";
+import {compareArrays} from "../../../../utils/json_hepler";
+import {state} from "../../../presenter/BasicState";
 
 export class CreatePresenterState implements state<CreatePresenterState, CreatePresenterViewModel>{
     public principals: Principal[];

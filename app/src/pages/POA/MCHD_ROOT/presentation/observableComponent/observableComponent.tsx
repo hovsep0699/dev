@@ -1,7 +1,7 @@
 import React from "react";
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import {state} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/BasicState";
-import {SectionPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/Sections/presenter/SectionPresenterState";
+import {Presenter} from "../presenter/presenter";
+import {state} from "../presenter/BasicState";
+import {SectionPresenterState} from "../pages/Sections/presenter/SectionPresenterState";
 
 interface ObservableComponentProps<K, T extends state<T, K>, P extends Presenter<K, T>> {
     builder: (state: T, child?: React.ReactNode) => React.ReactNode;

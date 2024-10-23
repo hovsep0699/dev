@@ -1,12 +1,12 @@
 import React from "react";
-import {DashboardPresenterState} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenterState";
-import {Presenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/presenter/presenter";
-import {PrincipalManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/PrincipalManager";
-import {RepresentativeManager} from "@distate/app/src/pages/POA/MCHD_ROOT/core/RepresentativeManager";
-import {Representative} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Representative";
-import {Principal} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/Principal";
+import {DashboardPresenterState} from "./DashboardPresenterState";
+import {Presenter} from "../../../presenter/presenter";
+import {PrincipalManager} from "../../../../core/PrincipalManager";
+import {RepresentativeManager} from "../../../../core/RepresentativeManager";
+import {Representative} from "../../../../domain/model/Representative";
+import {Principal} from "../../../../domain/model/Principal";
 import autobind from "autobind-decorator";
-import {DashboardPresenterViewModel} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenterViewModel";
+import {DashboardPresenterViewModel} from "./DashboardPresenterViewModel";
 
 export class DashboardPresenter extends Presenter<DashboardPresenterViewModel, DashboardPresenterState> {
     private principalManager: PrincipalManager;

@@ -1,8 +1,8 @@
 import React from "react";
-import PoaActionButtonsList from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/page/PoaActionButtonsList";
-import PoaTable from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/page/PoaTable";
-import {useGlobalState} from "@distate/app/src/pages/POA/MCHD_ROOT/mocks/context/GlobalState";
-import {DashboardPresenter} from "@distate/app/src/pages/POA/MCHD_ROOT/presentation/pages/POADashboard/presenter/DashboardPresenter";
+import PoaActionButtonsList from "./PoaActionButtonsList";
+import PoaTable from "./PoaTable";
+import {useGlobalState} from "../../../../mocks/context/GlobalState";
+import {DashboardPresenter} from "../presenter/DashboardPresenter";
 
 interface POADashboardProps {
     presenter: DashboardPresenter;

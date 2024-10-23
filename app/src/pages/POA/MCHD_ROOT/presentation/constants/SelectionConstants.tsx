@@ -6,7 +6,7 @@ import {
     PowersSubTrustType,
     PowersType,
     SelectionType
-} from "@distate/app/src/pages/POA/MCHD_ROOT/domain/model/SelectionType";
+} from "../../domain/model/SelectionType";
 
 export const typeOptions: SelectionType[] = [
     {value: "00000000", label: "Доверенность для взаимодействия между хозяйствующими субъектами"},
