@@ -1,0 +1,11 @@
+{
+  "name": "diflow/frontend",
+  "license": "Internal",
+  "type": "project",
+  "description": "Frontend DiFlow",
+  "config": {
+    "secure-http": false
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

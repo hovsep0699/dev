@@ -1,0 +1,9 @@
+{
+  "success": false,
+  "messages": {
+    "system": [
+      "User not found by email NONE_PROVIDED"
+    ],
+    "0": "Сотрудник не найден или не активирован"
+  }
+}

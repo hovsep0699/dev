@@ -1,0 +1,55 @@
+{
+  "employee": {
+    "id": 183,
+    "email": "kachalov@rambler.ru",
+    "position": "\u0413\u0435\u043d\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440",
+    "status": {
+      "title": "\u0410\u043a\u0442\u0438\u0432\u0435\u043d",
+      "systemName": "active"
+    }
+  },
+  "person": {
+    "id": 189,
+    "socialNumber": "19437245091",
+    "surname": "\u041a\u0430\u0447\u0430\u043b\u043e\u0432",
+    "name": "\u0410\u043d\u0442\u043e\u043d",
+    "email": "kachalov@rambler.ru",
+    "patronymic": "\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440\u043e\u0432\u0438\u0447",
+    "active": false
+  },
+  "company": {
+    "id": 201,
+    "diServerId": "KSR201811270019940287e0c054290a84b060c71942847",
+    "name": "\u041e\u041e\u041e \u0418\u043c\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0441\u043a\u0438\u0439 \u0424\u0430\u0440\u0444\u043e\u0440",
+    "taxAuthority": null,
+    "accountNumber": null,
+    "inn": "3702012193",
+    "bik": null,
+    "ogrn": "1033700071657",
+    "infsoobBeenSent": false,
+    "step": {
+      "title": "\u0437\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0434\u0430\u043d\u043d\u044b\u0445",
+      "systemName": "waiting_for_data"
+    },
+    "type": {
+      "title": "\u042e\u041b",
+      "name": "UL"
+    },
+    "division": {
+      "id": 201,
+      "title": "\u041e\u0441\u043d\u043e\u0432\u043d\u043e\u0439 \u043e\u0444\u0438\u0441",
+      "kpp": null
+    }
+  },
+  "certificate": {
+    "valid_from": "2018-11-21T14:20:00+03:00",
+    "valid_until": "2020-02-21T14:30:00+03:00",
+    "thumbprint": "70320A3D7919FC554A4AE39623615932F6B59063",
+    "active": true
+  },
+  "roles": [
+    "ROLE_INCOMPLETE",
+    "ROLE_COMPANY_EDITOR"
+  ],
+  "rights": []
+}

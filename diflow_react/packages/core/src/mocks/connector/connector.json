@@ -1,0 +1,12 @@
+{
+  "id": "connectorId",
+  "status": "configured",
+  "operator": {
+    "code": "2BM",
+    "name": "«СКБ Контур»",
+    "inn": "6663003127"
+  },
+  "position": "Должность",
+  "fnsUid": "Идентификатор участника документооброта ФНС",
+  "login": "Логин"
+}
