@@ -17,7 +17,7 @@ export class ServiceLocator {
     private services: Map<string, { instance?: any; factory?: ServiceFactory<any>; args?: any[] }> = new Map();
 
     @autobind
-    registerSingleton<T>(key: new (...args: any[]) => T, ...args: any[]): void {
+    public registerSingleton<T>(key: new (...args: any[]) => T, ...args: any[]): void {
         const keyString = key.name;
         console.log("registerSingleton", keyString);
         if (!this.services.has(keyString)) {
@@ -27,13 +27,13 @@ export class ServiceLocator {
     }
 
     @autobind
-    register<T>(key: new (...args: any[]) => T, factory: ServiceFactory<T>): void {
+    public register<T>(key: new (...args: any[]) => T, factory: ServiceFactory<T>): void {
         const keyString = key.name;
         this.services.set(keyString, { factory, instance: undefined });
     }
 
     @autobind
-    get<T>(key: new (...args: any[]) => T, ...args: any[]): T {
+    public get<T>(key: new (...args: any[]) => T, ...args: any[]): T {
         const keyString = key.name;
         const service = this.services.get(keyString);
         if (!service) {

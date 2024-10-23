@@ -22,17 +22,17 @@ class DialogState implements state<DialogState, DialogViewModel> {
         this.dialogs = dialogs ?? [];
     }
     @autobind
-    initial(): DialogState {
+    public initial(): DialogState {
         return new DialogState(
             []
         )
     }
     @autobind
-    copyWith({dialogs}: DialogViewModel): DialogState {
+    public copyWith({dialogs}: DialogViewModel): DialogState {
         return new DialogState(dialogs ?? this.dialogs);
     }
     @autobind
-    compare(other: DialogState): boolean {
+    public compare(other: DialogState): boolean {
         return compareArraysBase<BaseDialog>(this.dialogs, other.dialogs);
     }
 }

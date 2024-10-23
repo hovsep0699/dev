@@ -11,7 +11,7 @@ import {cleanObject} from "../utils/json_hepler";
 export class JsonCreateManager extends IJsonManager<CreatePresenter> {
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         const sectionState: SectionPresenterState = this.sectionPresenter.getState();
         const presenterState: CreatePresenterState = this.presenter.getState();
         const object: Record<string, any> = {

@@ -39,7 +39,7 @@ export class SectionPresenterState implements state<SectionPresenterState, Secti
     }
 
     @autobind
-    initial(): SectionPresenterState {
+    public initial(): SectionPresenterState {
         return new SectionPresenterState(
             {
                 principals: [],
@@ -55,7 +55,7 @@ export class SectionPresenterState implements state<SectionPresenterState, Secti
     }
 
     @autobind
-    compare(other: SectionPresenterState): boolean {
+    public compare(other: SectionPresenterState): boolean {
         return compareArrays<Principal>(this.principals, other.principals) &&
             compareArrays<Representative>(this.representatives, other.representatives) &&
             this.info.compare(other.info) &&
@@ -68,7 +68,7 @@ export class SectionPresenterState implements state<SectionPresenterState, Secti
     }
 
     @autobind
-    copyWith({
+    public copyWith({
                  principals,
                  representatives,
                  retrustSelected,
@@ -91,7 +91,7 @@ export class SectionPresenterState implements state<SectionPresenterState, Secti
     }
 
     @autobind
-    toFlatJson(){
+    public toFlatJson(){
         return {
             force: true,
             principals: this.principals,

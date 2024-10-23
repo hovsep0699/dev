@@ -27,7 +27,7 @@ export class PoaConfig {
     }
 
     @autobind
-    public get isInitialized(): boolean {
+    public isInitialized(): boolean {
         return this.isFinishInitialized;
     }
 
@@ -39,7 +39,7 @@ export class PoaConfig {
     }
 
     @autobind
-     async configureDependencies(){
+     public async configureDependencies(){
         await this._configureBlob();
         await this._configureManagers();
         await this._configureNetworkClient();
@@ -47,7 +47,7 @@ export class PoaConfig {
         await this._configureJsonManager()
         this.isFinishInitialized = true;
     }
-     async _configurePresenters() {
+     private async _configurePresenters() {
         serviceLocator.registerSingleton(
             CreatePresenter,
             serviceLocator.get(PrincipalManager),
@@ -76,24 +76,24 @@ export class PoaConfig {
         );
     }
 
-    async _configureNetworkClient()  {
+    private async _configureNetworkClient()  {
         serviceLocator.registerSingleton(AxiosClient, serviceLocator.get(BlobClient));
         serviceLocator.registerSingleton(ApiClient, serviceLocator.get(AxiosClient));
         serviceLocator.registerSingleton(CreateService, serviceLocator.get(ApiClient));
     }
 
-    async _configureBlob() {
+    private async _configureBlob() {
         serviceLocator.registerSingleton(BlobClient);
     }
 
-    async _configureManagers(){
+    private async _configureManagers(){
         serviceLocator.registerSingleton(RepresentativeManager, []);
         serviceLocator.registerSingleton(PrincipalManager, [doveritel]);
         serviceLocator.registerSingleton(SubAdminManager, []);
 
     }
 
-    async _configureJsonManager() {
+    private async _configureJsonManager() {
         serviceLocator.registerSingleton(JsonCreateManager,
             serviceLocator.get(CreatePresenter),
             serviceLocator.get(SectionPresenter));

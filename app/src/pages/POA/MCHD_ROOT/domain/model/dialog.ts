@@ -12,12 +12,12 @@ export class BaseDialog implements IModelBase<BaseDialog, BaseDialogProps> {
         this.dialog = dialog ?? null;
     }
     @autobind
-    copyWith(dialog: React.ReactNode | null) {
+    public copyWith(dialog: React.ReactNode | null) {
         return new BaseDialog(dialog);
     }
 
     @autobind
-    compare(other: BaseDialog) {
+    public compare(other: BaseDialog) {
         return this.dialog === other.dialog;
     }
 }

@@ -65,7 +65,7 @@ const PoaTable: React.FC<PoaTableProps> = ({ setSelectedPoa, presenter }: PoaTab
     setSelectedRecord(record);
     setSelectedPoa(record);
   };
-  const isLoading = poaConfig.isInitialized;
+  const isLoading = poaConfig.isInitialized();
   if (isLoading) {
     return <></>;
   }

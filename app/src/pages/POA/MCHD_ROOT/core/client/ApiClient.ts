@@ -10,17 +10,17 @@ export class ApiClient {
         this.axiosClient = axiosClient;
     }
 
-    public static getInstance() {
+    public static getInstance(): ApiClient {
         return ServiceLocator.getInstance().get(ApiClient);
     }
 
     @autobind
-    sendGet<T>(url: any, params: any) {
+    public async sendGet<T>(url: any, params: any): Promise<T> {
         return this.axiosClient.get<T>(url, { params });
     }
 
     @autobind
-    sendPost<T>(url: any, params: any) {
+    public async sendPost<T>(url: any, params: any): Promise<T> {
         if (params) {
             return this.axiosClient.post<T>(url, { params });
         }
@@ -28,22 +28,22 @@ export class ApiClient {
     }
 
     @autobind
-    sendDelete<T>(url: any, params: any) {
+    public async sendDelete<T>(url: any, params: any): Promise<T> {
         return this.axiosClient.delete<T>(url, params);
     }
 
     @autobind
-    sendPostJSON<T>(url: any, json: any) {
+    public async sendPostJSON<T>(url: any, json: any): Promise<T> {
         return this.axiosClient.post<T>(url, json);
     }
 
     @autobind
-    sendPostFormData<T>(url: any, formData: any) {
+    public async sendPostFormData<T>(url: any, formData: any): Promise<T> {
         return this.axiosClient.post<T>(url, formData);
     }
 
     @autobind
-    sendDeleteFormData<T>(url: any, data: any) {
+    public async sendDeleteFormData<T>(url: any, data: any): Promise<T> {
         return this.axiosClient.delete<T>(url, {data});
     }
 

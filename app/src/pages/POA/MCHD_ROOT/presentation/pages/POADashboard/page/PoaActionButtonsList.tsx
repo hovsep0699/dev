@@ -244,7 +244,7 @@ const PoaActionButtonsList: React.FC<PoaActionButtonsListProps> = ({ selectedPoa
 
 
   const filteredButtons = buttonData.filter((button, _: any) => button.isShow)
-  const isLoading = poaConfig.isInitialized;
+  const isLoading = poaConfig.isInitialized();
   if (isLoading) {
     return <></>;
   }

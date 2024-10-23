@@ -12,7 +12,7 @@ import POADashboard from "../pages/POADashboard/page/POADashboard";
 import {DashboardPresenter} from "../pages/POADashboard/presenter/DashboardPresenter";
 
 export const PoaRouter = () => {
-    const isLoading = poaConfig.isInitialized;
+    const isLoading = poaConfig.isInitialized();
     if (isLoading) {
         return <></>;
     }

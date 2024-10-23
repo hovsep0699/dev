@@ -31,7 +31,7 @@ export class SubTrustPresenterState implements state<SubTrustPresenterState, Sub
     }
 
     @autobind
-    initial(): SubTrustPresenterState {
+    public initial(): SubTrustPresenterState {
         return new SubTrustPresenterState(
             {
                 principals: [],
@@ -44,7 +44,7 @@ export class SubTrustPresenterState implements state<SubTrustPresenterState, Sub
         )
     }
     @autobind
-    copyWith({
+    public copyWith({
                  principals,
                  representatives,
                  isSubmitting,
@@ -63,7 +63,7 @@ export class SubTrustPresenterState implements state<SubTrustPresenterState, Sub
     }
 
     @autobind
-    compare(other: SubTrustPresenterState): boolean {
+    public compare(other: SubTrustPresenterState): boolean {
         return compareArrays<Principal>(this.principals, other.principals) &&
             compareArrays<Representative>(this.representatives, other.representatives) &&
             this.isSubmitting === other.isSubmitting &&
@@ -71,7 +71,7 @@ export class SubTrustPresenterState implements state<SubTrustPresenterState, Sub
             this.handleSubmit === other.handleSubmit;
     }
     @autobind
-    toFlatJson(){
+    public toFlatJson(){
         return {
             force: true,
             principals: this.principals,

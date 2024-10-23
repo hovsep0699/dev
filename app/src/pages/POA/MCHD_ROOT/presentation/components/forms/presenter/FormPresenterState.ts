@@ -48,7 +48,7 @@ export class FormPresenterState implements state<FormPresenterState, FormPresent
     }
 
     @autobind
-    initial(): FormPresenterState {
+    public initial(): FormPresenterState {
         return new FormPresenterState(
             {
                 principals: [],
@@ -66,7 +66,7 @@ export class FormPresenterState implements state<FormPresenterState, FormPresent
     }
 
     @autobind
-    copyWith({
+    public copyWith({
                  principals,
                  representatives,
                  currentAdmin,
@@ -93,7 +93,7 @@ export class FormPresenterState implements state<FormPresenterState, FormPresent
     }
 
     @autobind
-    compare(other: FormPresenterState): boolean {
+    public compare(other: FormPresenterState): boolean {
         return compareArrays<Principal>(this.principals, other.principals) &&
             compareArrays<Representative>(this.representatives, other.representatives) &&
             compareArrays<SubAdmin>(this.admins, other.admins) &&
@@ -108,7 +108,7 @@ export class FormPresenterState implements state<FormPresenterState, FormPresent
 
 
     @autobind
-    toFlatJson(){
+    public toFlatJson(){
         return {
             force: true,
             principals: this.principals,

@@ -24,7 +24,7 @@ export class Principal implements IModel<Principal, PrincipalProps>{
     }
 
     @autobind
-    copyWith({admins, fields}: PrincipalProps): Principal {
+    public copyWith({admins, fields}: PrincipalProps): Principal {
         return new Principal(admins ?? this.admins, fields ?? this.fields);
     }
 
@@ -88,7 +88,7 @@ export class Principal implements IModel<Principal, PrincipalProps>{
     }
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         const fields: Record<string, any> = this.getFields();
         const currentType: string = fields["type"];
 

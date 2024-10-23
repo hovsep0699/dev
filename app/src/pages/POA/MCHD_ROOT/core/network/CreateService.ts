@@ -10,7 +10,7 @@ export class CreateService {
     }
 
     @autobind
-    createPOA(formdata: any) {
+    public createPOA(formdata: any): void {
         this.apiClient.sendPostFormData(ApiConstants.createPOA, formdata)
             .then((response) => {
                 console.log("res::::: ", response);

@@ -52,7 +52,7 @@ export class Admin {
     }
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         return {}
     }
 }

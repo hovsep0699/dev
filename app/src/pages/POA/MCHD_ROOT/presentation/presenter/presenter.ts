@@ -23,13 +23,13 @@ export class Presenter<P, T extends state<T, P>> implements IPresenter<T> {
 
     // Add an observer
     @autobind
-    addObserver(observer: ComponentObserver<P, T>): void {
+    public addObserver(observer: ComponentObserver<P, T>): void {
         this.observers.push(observer);
     }
 
     // Remove an observer
     @autobind
-    removeObserver(observer: (state: T) => void): void {
+    public removeObserver(observer: (state: T) => void): void {
         this.observers = this.observers.filter(obs => obs.update !== observer);
     }
 
@@ -40,13 +40,13 @@ export class Presenter<P, T extends state<T, P>> implements IPresenter<T> {
 
     // Get the current state
     @autobind
-    getState(): T {
+    public getState(): T {
         return this.state as T;
     }
 
     // Set a new state and notify observers
     @autobind
-    setState(newState: T): void {
+    public setState(newState: T): void {
         console.log("old: ", this.state, newState);
         this.state = newState;
         this.notifyObservers();

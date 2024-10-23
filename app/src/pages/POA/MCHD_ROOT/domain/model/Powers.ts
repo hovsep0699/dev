@@ -73,7 +73,7 @@ export class Powers implements IModel<Powers, PowersProps> {
     }
 
     @autobind
-    compare(powers: Powers): boolean {
+    public compare(powers: Powers): boolean {
         return this.type === powers.type &&
             this.textPowers === powers.textPowers &&
             this.exercised === powers.exercised &&

@@ -33,7 +33,7 @@ export class DashboardPresenterState implements state<DashboardPresenterState, D
     }
 
     @autobind
-    copyWith({
+    public copyWith({
                  principals,
                  representatives,
                  isSubmitting,
@@ -51,7 +51,7 @@ export class DashboardPresenterState implements state<DashboardPresenterState, D
         });
     }
     @autobind
-    initial(): DashboardPresenterState {
+    public initial(): DashboardPresenterState {
         return new DashboardPresenterState(
             {
                 principals: [],
@@ -64,7 +64,7 @@ export class DashboardPresenterState implements state<DashboardPresenterState, D
         )
     }
     @autobind
-    compare(other: DashboardPresenterState): boolean {
+    public compare(other: DashboardPresenterState): boolean {
         return compareArrays<Principal>(this.principals, other.principals) &&
             compareArrays<Representative>(this.representatives, other.representatives) &&
             this.isSubmitting === other.isSubmitting &&
@@ -74,7 +74,7 @@ export class DashboardPresenterState implements state<DashboardPresenterState, D
     }
 
     @autobind
-    toFlatJson(){
+    public toFlatJson(){
         return {
             force: true,
             principals: this.principals,

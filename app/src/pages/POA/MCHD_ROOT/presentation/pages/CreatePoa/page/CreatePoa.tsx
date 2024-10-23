@@ -21,7 +21,7 @@ const CreatePoa: React.FC<CreatePoaProps> = ({presenter}: CreatePoaProps) => {
     console.log("sssssss: ", presenter.getState().toFlatJson());
     const createService = serviceLocator.get(CreateService);
     const jsonCreate = serviceLocator.get(JsonCreateManager);
-    const isLoading = poaConfig.isInitialized;
+    const isLoading = poaConfig.isInitialized();
     if (isLoading) {
         return <></>;
     }

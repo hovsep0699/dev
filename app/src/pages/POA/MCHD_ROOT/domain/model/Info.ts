@@ -85,7 +85,7 @@ export class Info implements IModel<Info, InfoProps> {
     }
 
     @autobind
-    compare(info: Info): boolean {
+    public compare(info: Info): boolean {
         return this.internalNumber === info.internalNumber &&
             this.expireAt === info.expireAt &&
             this.issuedAt === info.issuedAt &&

@@ -22,17 +22,17 @@ export class PrincipalAdmin implements IModel<PrincipalAdmin, PrincipalAdminProp
     }
 
     @autobind
-    getFields() {
+    public getFields() {
         return this.fields;
     }
 
     @autobind
-    getAdmins(): SubAdmin[] {
+    public getAdmins(): SubAdmin[] {
         return this.admins;
     }
 
     @autobind
-    changeAdmins(admins: SubAdmin[]) {
+    public changeAdmins(admins: SubAdmin[]) {
         this.admins = admins;
     }
 
@@ -61,23 +61,23 @@ export class PrincipalAdmin implements IModel<PrincipalAdmin, PrincipalAdminProp
     }
 
     @autobind
-    setFields(fields: any) {
+    public setFields(fields: any) {
         this.fields = fields;
     }
 
     @autobind
-    copyWith({admins, fields}: PrincipalAdminProps) {
+    public copyWith({admins, fields}: PrincipalAdminProps) {
         return new PrincipalAdmin(admins ?? this.admins, fields ?? this.fields);
     }
 
     @autobind
-    compare(other: PrincipalAdmin): boolean {
+    public compare(other: PrincipalAdmin): boolean {
         return deepEqual(this.getFields(), other.getFields()) &&
             compareArrays<SubAdmin>(this.getAdmins(), other.getAdmins());
     }
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         const fields: Record<string, any> = this.getFields();
         const currentType: string = fields["type"];
 

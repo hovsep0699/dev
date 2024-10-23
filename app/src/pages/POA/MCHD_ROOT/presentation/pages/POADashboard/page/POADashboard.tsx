@@ -13,7 +13,7 @@ interface POADashboardProps {
 const POADashboard: React.FC<POADashboardProps> = ({presenter}: POADashboardProps) => {
     const [selectedPoa, setSelectedPoa] = React.useState(null);
     const {isCompany, setIsCompany} = useGlobalState()
-    const isLoading = poaConfig.isInitialized;
+    const isLoading = poaConfig.isInitialized();
     if (isLoading) {
         return <></>;
     }

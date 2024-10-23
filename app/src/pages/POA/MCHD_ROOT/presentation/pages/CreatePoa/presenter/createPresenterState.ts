@@ -33,7 +33,7 @@ export class CreatePresenterState implements state<CreatePresenterState, CreateP
     }
 
     @autobind
-    initial(): CreatePresenterState {
+    public initial(): CreatePresenterState {
         return new CreatePresenterState(
             {
                 principals: new Array<Principal>(),
@@ -47,7 +47,7 @@ export class CreatePresenterState implements state<CreatePresenterState, CreateP
     }
 
     @autobind
-    copyWith({
+    public copyWith({
                  principals,
                  representatives,
                  isSubmitting,
@@ -66,7 +66,7 @@ export class CreatePresenterState implements state<CreatePresenterState, CreateP
     }
 
     @autobind
-    compare(other: CreatePresenterState): boolean {
+    public compare(other: CreatePresenterState): boolean {
         return compareArrays<Principal>(this.principals, other.principals) &&
             compareArrays<Representative>(this.representatives, other.representatives) &&
             this.isSubmitting === other.isSubmitting &&
@@ -75,7 +75,7 @@ export class CreatePresenterState implements state<CreatePresenterState, CreateP
     }
 
     @autobind
-    toFlatJson(){
+    public toFlatJson(){
         return {
             force: true,
             principals: this.principals,

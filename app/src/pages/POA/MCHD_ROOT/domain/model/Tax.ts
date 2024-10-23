@@ -16,7 +16,7 @@ export class Tax implements IModel<Tax, TaxProps> {
     }
 
     @autobind
-    copyWith({
+    public copyWith({
         id,
         value
     }: TaxProps): Tax {
@@ -24,12 +24,12 @@ export class Tax implements IModel<Tax, TaxProps> {
     }
 
     @autobind
-    compare(other: Tax): boolean {
+    public compare(other: Tax): boolean {
         return this.id === other.id && this.value === other.value;
     }
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         return {
             taxValue: this.value,
         }

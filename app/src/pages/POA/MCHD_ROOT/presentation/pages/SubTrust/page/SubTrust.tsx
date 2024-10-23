@@ -28,7 +28,7 @@ const SubTrust: React.FC<SubTrustProps> = ({
     paddingRight,
     paddingLeft
 }: SubTrustProps) => {
-    const isLoading = poaConfig.isInitialized;
+    const isLoading = poaConfig.isInitialized();
     if (isLoading) {
         return <></>;
     }

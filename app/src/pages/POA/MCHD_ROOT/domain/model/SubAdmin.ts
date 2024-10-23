@@ -14,12 +14,12 @@ export class SubAdmin implements IModel<SubAdmin, SubAdminProps>{
     }
 
     @autobind
-    copyWith({fields}: SubAdminProps): SubAdmin {
+    public copyWith({fields}: SubAdminProps): SubAdmin {
         return new SubAdmin(fields ?? this.fields);
     }
 
     @autobind
-    compare(other: SubAdmin): boolean {
+    public compare(other: SubAdmin): boolean {
         return deepEqual(this.getFields(), other.getFields());
     }
 
@@ -35,7 +35,7 @@ export class SubAdmin implements IModel<SubAdmin, SubAdminProps>{
 
 
     @autobind
-    toFlatJson(): Record<string, any> {
+    public toFlatJson(): Record<string, any> {
         return {}
     }
 }
