@@ -1,9 +1,0 @@
-export const DOCUMENT = 'Документ';
-export const INVOICE = 'Счёт-фактура';
-export const INVOICE_CORRECTION = 'Корректировочный счёт-фактура';
-export const UNIVERSAL_INVOICE = 'Универсальный передаточный документ';
-export const UNIVERSAL_CORRECTION_DOCUMENT = 'Универсальный корректировочный документ';
-export const ACT = 'Акт';
-export const BILL = 'Счёт на оплату';
-export const WAYBILL = 'Накладная';
-export const INFORMATION_MESSAGE = 'Информационное сообщение';
