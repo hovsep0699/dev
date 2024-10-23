@@ -6,7 +6,6 @@ import {state} from "../presenter/BasicState";
 import autobind from "autobind-decorator";
 import {compareArraysBase} from "../../utils/json_hepler";
 import {BaseDialog} from "../../domain/model/dialog";
-import {CreatePresenterViewModel} from "../pages/CreatePoa/presenter/createPresenterViewModel";
 
 interface DialogProviderProps {
     children: ReactNode;

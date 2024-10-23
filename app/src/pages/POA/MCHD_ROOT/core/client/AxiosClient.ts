@@ -9,8 +9,8 @@ class AxiosClient {
     private client: AxiosInstance;
     private blobClient: BlobClient;
 
-    @autobind
-    static getInstance(): AxiosClient {
+
+    public static getInstance(): AxiosClient {
         return ServiceLocator.getInstance().get(AxiosClient);
     }
 

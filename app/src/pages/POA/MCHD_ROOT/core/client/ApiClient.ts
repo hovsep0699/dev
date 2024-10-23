@@ -10,8 +10,7 @@ export class ApiClient {
         this.axiosClient = axiosClient;
     }
 
-    @autobind
-    static getInstance() {
+    public static getInstance() {
         return ServiceLocator.getInstance().get(ApiClient);
     }
 
